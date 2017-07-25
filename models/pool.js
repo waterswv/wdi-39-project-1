@@ -6,7 +6,15 @@ let PoolSchema = new Schema({
   name: String,
   address: String,
   phoneNumber: String,
-  contactEmail: String
+  contactEmail: String,
+  monday: String,
+  tuesday: String,
+  wednesday: String,
+  thursday: String,
+  friday: String,
+  saturday: String,
+  sunday: String,
+  special: String
 })
 
 let Pool = mongoose.model('Pool', PoolSchema);

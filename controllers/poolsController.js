@@ -16,12 +16,12 @@ function index(req, res) {
   });
 }
 
-function show(req, res) {
+function show (req, res) {
   // this will return a pool by ID.
   console.log('This route shows one pool by ID');
 
   // take id from url parameter & find Pool object to pass to callback
-  db.Pool.findById(req.params.id, function(err, pool) {
+  db.Pool.findById({_id: req.params.id}, function(err, pool) {
     if (err) {
       console.log("Error finding ID", err);
     }
