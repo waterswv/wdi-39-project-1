@@ -9,6 +9,6 @@ let PoolSchema = new Schema ({
   contactEmail: String
 })
 
-let Pool = model.mongoose('Pool', PoolSchema);
+let Pool = mongoose.model('Pool', PoolSchema);
 
 module.exports = Pool;
