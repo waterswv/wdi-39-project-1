@@ -1,24 +1,36 @@
 // SERVER-SIDE JAVASCRIPT
 
 //require express in our app
-var express = require('express');
+let express = require('express');
 // generate a new express app and call it 'app'
-var app = express();
-var bodyParser = require('body-parser');
+let app = express();
+let bodyParser = require('body-parser');
 
 // serve static files from public folder
 app.use(express.static(__dirname + '/public'));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
+// import controllers
+let controllers = require('./controllers');
 
 // routes
 
-app.get('/', function (req, res) {
+app.get('/', function(req, res) {
 
-  res.sendFile('views/index.html', {root:__dirname});
-    console.log(__dirname);
+  res.sendFile('views/index.html', {
+    root: __dirname
+  });
+  console.log(__dirname);
 });
 
+// documentation route
+app.get('/api', controllers.api.index);
 
+// Pool routes
+app.get('/api/pools', controllers.pools.index);
+app.get('/api/pools/id:', controllers.pools.show);
 
 
 
@@ -26,6 +38,6 @@ app.get('/', function (req, res) {
  * SERVER *
  **********/
 
-app.listen(process.env.PORT || 3000, function (){
+app.listen(process.env.PORT || 3000, function() {
   console.log("Express Server is up and running on http://localhost:3000/");
 });
