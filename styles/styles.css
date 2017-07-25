@@ -3,8 +3,52 @@
 }
 
 p {
-  margin: 5px;
+  padding: 5px 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  padding: 10px 0;
+  margin: 0;
+}
+.container {
+  /*max-width: 900px;*/
+}
+
+.row {
+}
+
+.left, .right {
+  /*padding: 0;*/
 }
 /*body {
   background: pink;
 }*/
+
+.map {
+  padding: 10px;
+}
+
+#dummy-map{
+  height: 500px;
+  background: grey;
+  font-size: 5em;
+  text-align: center;
+}
+
+#dummy-map div {
+  margin-top: 30%;
+}
+
+footer {
+  height: 50px;
+}
+
+footer nav {
+  text-align: center;
+}
+
+footer nav a {
+  display: inline-block;
+  padding: 10px;
+}
