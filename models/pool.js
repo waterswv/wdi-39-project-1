@@ -2,7 +2,7 @@
 let mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
-let PoolSchema = new Schema ({
+let PoolSchema = new Schema({
   name: String,
   address: String,
   phoneNumber: String,
