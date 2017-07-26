@@ -5,43 +5,44 @@ function renderPool(pool){
 
   let poolHTML = `
           <!--Beginning of Pool Data-->
-          <div class="pool row">
+          <div class="pool row" data-pool-id="${pool._id}">
 
             <!--Pool Info Column Begin-->
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4">
 
               <h2>${pool.name}</h2>
+              <button class="pool-delete-btn">Delete Pool</button>
 
               <section class="op-hours">
                   <h3>Hours of Operation</h3>
 
                   <div class="row">
-                    <p class="col-sm-6 col-xs-12">Monday</p>
-                    <p class="col-sm-6 col-xs-12">${pool.monday}</p>
+                    <p class="col-sm-6">Monday</p>
+                    <p class="col-sm-6">${pool.monday}</p>
                   </div>
                   <div class="row">
-                    <p class="col-sm-6 col-xs-12">Tuesday</p>
-                    <p class="col-sm-6 col-xs-12">${pool.tuesday}</p>
+                    <p class="col-sm-6">Tuesday</p>
+                    <p class="col-sm-6">${pool.tuesday}</p>
                   </div>
                   <div class="row">
-                    <p class="col-sm-6 col-xs-12">Wednesday</p>
-                    <p class="col-sm-6 col-xs-12">${pool.wednesday}</p>
+                    <p class="col-sm-6">Wednesday</p>
+                    <p class="col-sm-6">${pool.wednesday}</p>
                   </div>
                   <div class="row">
-                    <p class="col-sm-6 col-xs-12">Thursday</p>
-                    <p class="col-sm-6 col-xs-12">${pool.thursday}</p>
+                    <p class="col-sm-6">Thursday</p>
+                    <p class="col-sm-6">${pool.thursday}</p>
                   </div>
                   <div class="row">
-                    <p class="col-sm-6 col-xs-12">Friday</p>
-                    <p class="col-sm-6 col-xs-12">${pool.friday}</p>
+                    <p class="col-sm-6">Friday</p>
+                    <p class="col-sm-6">${pool.friday}</p>
                   </div>
                   <div class="row">
-                    <p class="col-sm-6 col-xs-12">Saturday</p>
-                    <p class="col-sm-6 col-xs-12">${pool.saturday}</p>
+                    <p class="col-sm-6">Saturday</p>
+                    <p class="col-sm-6">${pool.saturday}</p>
                   </div>
                   <div class="row">
-                    <p class="col-sm-6 col-xs-12">Sunday</p>
-                    <p class="col-sm-6 col-xs-12">${pool.sunday}</p>
+                    <p class="col-sm-6">Sunday</p>
+                    <p class="col-sm-6">${pool.sunday}</p>
                   </div>
 
                   <!-- <div class="add-event">
@@ -51,7 +52,7 @@ function renderPool(pool){
             <!--Pool Info Column End-->
 
             <!-- Pool Info Column Begin-->
-            <div class="col-sm-3">
+            <div class="col-sm-6 col-md-4">
 
               <section class="contact">
                 <p>${pool.address}</p>
@@ -76,5 +77,5 @@ function renderPool(pool){
         </div>
         <!--Pool Info End -->`;
 
-  $('.main').append(poolHTML);
+  $('.main').prepend(poolHTML);
 }

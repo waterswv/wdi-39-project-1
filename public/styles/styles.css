@@ -1,4 +1,4 @@
-* {
+div {
   border: 1px dashed grey;
 }
 
@@ -20,6 +20,15 @@ h1, h2, h3, h4 {
 .main {
   /*margin-top: 40px;
   margin-bottom: 40px;*/
+}
+
+#add-pool{
+  margin: 20px;
+}
+
+#add-pool input {
+  padding: 5px;
+  margin: 5px;
 }
 
 .pool {
