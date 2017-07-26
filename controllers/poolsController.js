@@ -31,7 +31,14 @@ function show(req, res) {
 }
 
 function create(req, res) {
-
+  //this will create a new pool
+  // retrieve data from parameters passed from client-browser
+  db.Pool.create(req.body, function (err, pool) {
+    if (err){
+      console.log('unable to create new pool error', err);
+    }
+    res.json(pool);
+  })
 }
 
 function destroy(req, res) {
@@ -39,7 +46,7 @@ function destroy(req, res) {
   console.log('This route deletes one pool by ID', req.params.id);
 
   // find db record by id from paramter passed in url string & remove it from the DB
-  db.Pool.findOneAndRemove(req.params.id, function (err, pool) {
+  db.Pool.findOneAndRemove({_id: req.params.id}, function (err, pool) {
     //log error messaging
     if (err) {
       console.log('Unable to find ID error', err);
