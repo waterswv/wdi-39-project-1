@@ -32,7 +32,7 @@ function show(req, res) {
 
 function create(req, res) {
   //this will create a new pool
-
+  // retrieve data from parameters passed from client-browser
   db.Pool.create(req.body, function (err, pool) {
     if (err){
       console.log('unable to create new pool error', err);
