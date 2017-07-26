@@ -62,7 +62,7 @@ poolList.push({
   special: 'Swim Practice Tuesdays 5:30PM - 7PM'
 });
 
-var eventList [];
+var eventList = [];
 
 eventList.push({
   dayOfWeek: 'Monday',
@@ -89,6 +89,10 @@ eventList.push({
   startTime: '6PM',
   endTime: '8PM',
   isRecurring: true
+});
+
+poolList.forEach(function(pool){
+  pool.events = eventList;
 });
 
 // Empty Pools DB & then add seed list pools data via create method.
