@@ -16,12 +16,12 @@ function index(req, res) {
   });
 }
 
-function show (req, res) {
+function show(req, res) {
   // this will return a pool by ID.
   console.log('This route shows one pool by ID');
 
   // take id from url parameter & find Pool object to pass to callback
-  db.Pool.findById({_id: req.params.id}, function(err, pool) {
+  db.Pool.findById(req.params.id, function(err, pool) {
     if (err) {
       console.log("Error finding ID", err);
     }
@@ -30,9 +30,30 @@ function show (req, res) {
 
 }
 
+function create(req, res) {
+
+}
+
+function destroy(req, res) {
+  // Log what is happening with this route
+  console.log('This route deletes one pool by ID', req.params.id);
+
+  // find db record by id from paramter passed in url string & remove it from the DB
+  db.Pool.findOneAndRemove(req.params.id, function (err, pool) {
+    //log error messaging
+    if (err) {
+      console.log('Unable to find ID error', err);
+    }
+
+    // respond with the the object that was removed
+    res.json(pool);
+  });
+}
 
 // controllers/poolsController.js
 module.exports = {
   index: index,
-  show: show
+  show: show,
+  create: create,
+  destroy: destroy
 };

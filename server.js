@@ -30,7 +30,9 @@ app.get('/api', controllers.api.index);
 
 // Pool routes
 app.get('/api/pools', controllers.pools.index);
-app.get('/api/pools/id:', controllers.pools.show);
+app.get('/api/pools/:id', controllers.pools.show);
+app.post('/api/pools', controllers.pools.create);
+app.delete('/api/pools/:id', controllers.pools.destroy);
 
 
 
