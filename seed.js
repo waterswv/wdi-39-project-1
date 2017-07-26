@@ -62,7 +62,36 @@ poolList.push({
   special: 'Swim Practice Tuesdays 5:30PM - 7PM'
 });
 
-// Empty Pools DB & then add seed list pools data via create method. 
+var eventList [];
+
+eventList.push({
+  dayOfWeek: 'Monday',
+  title: 'Swim Team Practice',
+  description: 'U-17 Boys & Girls Practice',
+  startTime: '4PM',
+  endTime: '5PM',
+  isRecurring: true
+});
+
+eventList.push({
+  dayOfWeek: 'Tuesday',
+  title: 'Swim Meets',
+  description: 'City Meet Invitational, all qualifiers',
+  startTime: '3PM',
+  endTime: '7PM',
+  isRecurring: true
+});
+
+eventList.push({
+  dayOfWeek: 'Friday',
+  title: 'Adult Lessons',
+  description: '3 Swim lanes set aside for Adult lessons',
+  startTime: '6PM',
+  endTime: '8PM',
+  isRecurring: true
+});
+
+// Empty Pools DB & then add seed list pools data via create method.
 db.Pool.remove({}, function(err, pools){
 
   db.Pool.create(poolList, function(err, pools){
