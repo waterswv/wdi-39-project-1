@@ -2,6 +2,8 @@
 let mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
+let Events = require('./events')
+
 let PoolSchema = new Schema({
   name: String,
   address: String,
@@ -14,7 +16,8 @@ let PoolSchema = new Schema({
   friday: String,
   saturday: String,
   sunday: String,
-  special: String
+  special: String,
+  events: [Events.schema]
 })
 
 let Pool = mongoose.model('Pool', PoolSchema);
