@@ -8,7 +8,7 @@ function renderPool(pool){
           <div class="pool row">
 
             <!--Pool Info Column Begin-->
-            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="col-sm-6 col-md-4">
 
               <h2>${pool.name}</h2>
 
@@ -51,7 +51,7 @@ function renderPool(pool){
             <!--Pool Info Column End-->
 
             <!-- Pool Info Column Begin-->
-            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="col-sm-6 col-md-4">
 
               <section class="contact">
                 <p>${pool.address}</p>
