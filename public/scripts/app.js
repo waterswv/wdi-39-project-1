@@ -28,21 +28,21 @@ $(document).ready(function(){
 
 });
 
+// any time there's an ajax call, re-attach listeners on all the delete pool btns
+$(document).ajaxComplete(listenDeletePool);
+
 function handleIndexSuccess(poolsData){
   poolsData.forEach(function(pool){
     renderPool(pool);
   });
-  listenDeletePool();
   // delete Pool event listener and ajax call
   // must load AFTER initial rendering of pools or there is nothing to bind to
 }
 
 function listenDeletePool(){
-
   $('.pool-delete-btn').on('click', function(e){
     e.preventDefault();
     let id = $(this).closest('.pool').data('pool-id');
-    console.log("delete pool btn clicked", id);
     $.ajax({
       method: 'DELETE',
       url: `/api/pools/${id}`,
@@ -50,17 +50,14 @@ function listenDeletePool(){
       error: handleError
     });
   });
-
 }
 
 function handleNewPoolSuccess(newPool){
   console.log("new pool success", newPool);
   renderPool(newPool);
-  listenDeletePool();
 }
 
 function handlePoolDeleteSuccess(deletedPool){
-  console.log("deleting a pool from db");
   let poolDiv = `[data-pool-id=${deletedPool._id}]`;
   $(poolDiv).hide('slow', function(){
     $(poolDiv).remove;
