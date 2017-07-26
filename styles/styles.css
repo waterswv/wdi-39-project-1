@@ -1,0 +1,60 @@
+* {
+  border: 1px dashed grey;
+}
+
+p {
+  padding: 5px 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  padding: 10px 0;
+  margin: 0;
+}
+.container {
+  /*max-width: 900px;*/
+  /*margin-top: 40px;
+  margin-bottom: 40px;*/
+}
+
+.main {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/*body {
+  background: pink;
+}*/
+
+.map {
+  padding: 10px;
+}
+
+.search {
+  float: right;
+  margin-top: 20px;
+}
+
+#dummy-map{
+  height: 500px;
+  background: grey;
+  font-size: 5em;
+  text-align: center;
+}
+
+#dummy-map div {
+  margin-top: 30%;
+}
+
+footer {
+  height: 50px;
+}
+
+footer nav {
+  text-align: center;
+}
+
+footer nav a {
+  display: inline-block;
+  padding: 10px;
+}
