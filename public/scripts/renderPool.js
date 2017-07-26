@@ -5,12 +5,13 @@ function renderPool(pool){
 
   let poolHTML = `
           <!--Beginning of Pool Data-->
-          <div class="pool row">
+          <div class="pool row" data-pool-id="${pool._id}">
 
             <!--Pool Info Column Begin-->
             <div class="col-sm-6 col-md-4">
 
               <h2>${pool.name}</h2>
+              <button class="pool-delete-btn">Delete Pool</button>
 
               <section class="op-hours">
                   <h3>Hours of Operation</h3>
@@ -76,5 +77,5 @@ function renderPool(pool){
         </div>
         <!--Pool Info End -->`;
 
-  $('.main').append(poolHTML);
+  $('.main').prepend(poolHTML);
 }
