@@ -1,7 +1,7 @@
 {
   "name": "wdi-39-project-1",
   "version": "1.0.0",
-  "description": "",
+  "description": "pool app Sepp H Bryan M",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/waterswv/wdi-39-project-1.git"
   },
-  "author": "",
+  "author": "Sepp Hammer, Bryan Mierke",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/waterswv/wdi-39-project-1/issues"
@@ -21,5 +21,6 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "mongoose": "^4.11.4"
-  }
+  },
+  "devDependencies": {}
 }
