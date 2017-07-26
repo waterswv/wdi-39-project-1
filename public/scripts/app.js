@@ -16,17 +16,15 @@ $(document).ready(function(){
     console.log("add-pool form submitted");
     let data = $(this).serialize();
     console.log(data);
-    // $.ajax({
-    //   method: 'POST',
-    //   url: 'api/pools/',
-    //   data: data,
-    //   success: handleNewPoolSuccess,
-    //   error: handleError
-    // });
+    $.ajax({
+      method: 'POST',
+      url: '/api/pools/',
+      data: data,
+      success: handleNewPoolSuccess,
+      error: handleError
+    });
+    $(this).trigger('reset');
   });
-
-
-
 
 });
 
@@ -34,9 +32,12 @@ function handleIndexSuccess(poolsData){
   poolsData.forEach(function(pool){
     renderPool(pool);
   });
-
+  listenDeletePool();
   // delete Pool event listener and ajax call
   // must load AFTER initial rendering of pools or there is nothing to bind to
+}
+
+function listenDeletePool(){
 
   $('.pool-delete-btn').on('click', function(e){
     e.preventDefault();
@@ -44,17 +45,18 @@ function handleIndexSuccess(poolsData){
     console.log("delete pool btn clicked", id);
     $.ajax({
       method: 'DELETE',
-      url: `api/pools/:${id}`,
+      url: `/api/pools/${id}`,
       success: handlePoolDeleteSuccess,
       error: handleError
     });
   });
+
 }
 
 function handleNewPoolSuccess(newPool){
   console.log("new pool success", newPool);
   renderPool(newPool);
-
+  listenDeletePool();
 }
 
 function handlePoolDeleteSuccess(deletedPool){
