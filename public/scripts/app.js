@@ -1,4 +1,4 @@
-console.log("sanity check app.js connected");
+console.log(`sanity check app.js connected`);
 
 $(document).ready(function(){
 
@@ -20,9 +20,4 @@ function handleIndexSuccess(poolsData){
 
 function handleError(err){
   console.log(err);
-}
-
-
-function renderPool(pool){
-  console.log(pool.name, pool.monday);
 }

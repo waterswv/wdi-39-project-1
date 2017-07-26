@@ -22,9 +22,9 @@ h1, h2, h3, h4 {
   margin-bottom: 40px;
 }
 
-/*body {
-  background: pink;
-}*/
+.pool {
+  margin-top: 40px;
+}
 
 .map {
   padding: 10px;
