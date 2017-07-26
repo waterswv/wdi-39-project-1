@@ -6,3 +6,4 @@ mongoose.connect('mongodb://localhost/poolapp_test');
 
 
 module.exports.Pool = require('./pool');
+module.exports.Events = require('./events');
