@@ -111,10 +111,7 @@ function handlePoolDeleteSuccess(deletedPool){
     $(poolDiv).remove;
   });
   // console.log("deleted a pool from db", deletedPool._id);
-  // remove event listeners such that adding event listeners accross page on ajax complete does not duplicate event listeners
-  $('.pool-delete-btn').off();
-  $('.add-event form').off();
-  $('.delete-event').off();
+  removeEventListeners();
 }
 
 function handleNewEventSuccess(pool){
@@ -124,10 +121,7 @@ function handleNewEventSuccess(pool){
   // let event to add be the last event listed in the pool response
   let eventToAdd = pool.events[pool.events.length-1];
   renderEvent(eventsDiv, eventToAdd);
-  // remove event listeners such that adding event listeners accross page on ajax complete does not duplicate event listeners
-  $('.pool-delete-btn').off();
-  $('.add-event form').off();
-  $('.delete-event').off();
+  removeEventListeners();
 }
 
 function handleEventDeleteSuccess(eventDeleted){
@@ -137,12 +131,16 @@ function handleEventDeleteSuccess(eventDeleted){
     $(`#${eventDeleted._id}`).parent().hide('slow', function(){
       $(`#${eventDeleted._id}`).parent().remove();
     });
-
-  $('.pool-delete-btn').off();
-  $('.add-event form').off();
-  $('.delete-event').off();
+  removeEventListeners();
 }
 
 function handleError(err){
   console.log(err);
+}
+
+// remove event listeners such that adding event listeners accross page on ajax complete does not duplicate event listeners
+function removeEventListeners(){
+  $('.pool-delete-btn').off();
+  $('.add-event form').off();
+  $('.delete-event').off();
 }
