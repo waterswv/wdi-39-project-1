@@ -51,6 +51,10 @@ function handleIndexSuccess(poolsData){
       zoom: 12,
       center: theLocation
     });
+    let marker = new google.maps.Marker({
+        position: theLocation,
+        map: map,
+      });
   });
   // delete Pool event listener and ajax call
   // must load AFTER initial rendering of pools or there is nothing to bind to
