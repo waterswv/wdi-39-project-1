@@ -17,6 +17,7 @@ let PoolSchema = new Schema({
   saturday: String,
   sunday: String,
   special: String,
+  map: String,
   events: [Events.schema]
 })
 
