@@ -50,14 +50,13 @@ h1, h2, h3, h4 {
 }
 
 #dummy-map{
-  height: 500px;
-  background: grey;
-  font-size: 5em;
-  text-align: center;
+  height: 250px;
+  width: 100%
+
 }
 
 #dummy-map div {
-  margin-top: 30%;
+  margin-top: 10px;
 }
 
 footer {

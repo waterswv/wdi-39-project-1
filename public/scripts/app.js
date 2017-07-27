@@ -38,8 +38,23 @@ function handleIndexSuccess(poolsData){
     renderPool(pool);
     let eventsDiv = `[data-pool-events-id=${pool._id}]`;
     pool.events.forEach(function(element){
+      console.log("EVENT load");
+      console.log(pool);
       renderEvent(eventsDiv, element);
     });
+    console.log('the lat is ', pool.maps.lat);
+    let theLocation = {
+      lat: pool.maps.lat,
+      lng: pool.maps.long
+    };
+    let map = new google.maps.Map(document.getElementById('dummy-map'), {
+      zoom: 12,
+      center: theLocation
+    });
+    let marker = new google.maps.Marker({
+        position: theLocation,
+        map: map,
+      });
   });
 }
 
