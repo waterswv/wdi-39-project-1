@@ -31,10 +31,6 @@ poolList.push({
   saturday: '10AM - 5PM',
   sunday: '10AM - 5PM',
   map: 'https://www.google.com/maps/place/Pomeroy+Recreation+%26+Rehabilitation+Center/@37.7300593,-122.5039161,17z/data=!3m1!4b1!4m5!3m4!1s0x808f7d725580bfe1:0xcc686f35d12e9a9d!8m2!3d37.7300624!4d-122.5014317',
-  maps: {
-    lat: 37.7594696,
-    long: -122.4248613
-  },
   special: 'Swim Practice Tuesdays 5:30PM - 7PM'
 });
 
@@ -67,6 +63,10 @@ poolList.push({
   saturday: '10AM - 5PM',
   sunday: '10AM - 5PM',
   map: 'https://www.google.com/maps/place/Mission+Pool/@37.7594696,-122.424856,17z/data=!3m1!4b1!4m5!3m4!1s0x808f7e22b49293c9:0x4220f652e9211f5f!8m2!3d37.7594696!4d-122.4226673',
+  maps: {
+    lat: 37.7594696,
+    long: -122.4248613
+  },
   special: 'Swim Practice Tuesdays 5:30PM - 7PM'
 });
 
