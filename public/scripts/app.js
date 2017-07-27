@@ -101,9 +101,14 @@ function handlePoolDeleteSuccess(deletedPool){
   $('.add-event form').off();
 }
 
-function handleNewEventSuccess(newEvent){
-  console.log("hand new event success function");
-  // renderEvent(eventsDiv);
+function handleNewEventSuccess(pool){
+  let id = pool._id;
+  console.log("new event stored in pool with id: ", id)
+  let eventsDiv = `[data-pool-events-id=${pool._id}]`;
+  console.log("new event to put in eventsDiv", eventsDiv);
+  // let event to add be the last event listed in the pool response
+  let eventToAdd = pool.events[pool.events.length-1];
+  renderEvent(eventsDiv, eventToAdd);
   // remove event listeners such that adding event listeners accross page on ajax complete does not duplicate event listeners
   $('.pool-delete-btn').off();
   $('.add-event form').off();

@@ -62,7 +62,7 @@ function renderPool(pool){
                 <div data-pool-events-id='${pool._id}'>
                 </div>
 
-                <!-- ADD EVENT -->
+                <!-- ADD EVENT FORM-->
                 <div class="add-event">
                   <h4>Add an Event</h4>
 
