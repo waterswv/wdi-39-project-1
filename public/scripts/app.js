@@ -34,6 +34,7 @@ $(document).ajaxComplete(listenDeletePool);
 function handleIndexSuccess(poolsData){
   poolsData.forEach(function(pool){
     renderPool(pool);
+    renderEvents(pool);
   });
   // delete Pool event listener and ajax call
   // must load AFTER initial rendering of pools or there is nothing to bind to
@@ -55,6 +56,7 @@ function listenDeletePool(){
 function handleNewPoolSuccess(newPool){
   console.log("new pool success", newPool);
   renderPool(newPool);
+  renderEvents(newPool);
 }
 
 function handlePoolDeleteSuccess(deletedPool){

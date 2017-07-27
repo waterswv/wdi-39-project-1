@@ -44,9 +44,6 @@ function renderPool(pool){
                     <p class="col-sm-6">Sunday</p>
                     <p class="col-sm-6">${pool.sunday}</p>
                   </div>
-
-                  <!-- <div class="add-event">
-                </div> -->
               </section>
             </div>
             <!--Pool Info Column End-->
@@ -62,9 +59,8 @@ function renderPool(pool){
 
               <section class="events">
                 <h3>Events and Schedule Alerts</h3>
-                <p>${pool.special}</p>
-                <!-- <div class="add-event">
-              </div> -->
+                <div data-pool-events-id='${pool._id}'>
+                </div>
               </section>
             </div>
           <!-- Pool Info Column End -->
