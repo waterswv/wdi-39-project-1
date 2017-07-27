@@ -15,6 +15,10 @@ poolList.push({
   saturday: '10AM - 5PM',
   sunday: '10AM - 5PM',
   map: 'https://www.google.com/maps/place/Bakar+Fitness+%26+Recreation+Center+at+UCSF+Mission+Bay/@37.7682497,-122.3954389,17z/data=!3m1!4b1!4m5!3m4!1s0x808f7fcef9a8173f:0x1d557fc43e915386!8m2!3d37.7682497!4d-122.3932502',
+  maps: {
+    lat: 37.7594696,
+    long: -122.4248613
+  },
   special: 'Swim Practice Tuesdays 5:30PM - 7PM'
 });
 
@@ -31,6 +35,10 @@ poolList.push({
   saturday: '10AM - 5PM',
   sunday: '10AM - 5PM',
   map: 'https://www.google.com/maps/place/Pomeroy+Recreation+%26+Rehabilitation+Center/@37.7300593,-122.5039161,17z/data=!3m1!4b1!4m5!3m4!1s0x808f7d725580bfe1:0xcc686f35d12e9a9d!8m2!3d37.7300624!4d-122.5014317',
+  maps: {
+    lat: 37.7594696,
+    long: -122.4248613
+  },
   special: 'Swim Practice Tuesdays 5:30PM - 7PM'
 });
 
@@ -47,6 +55,10 @@ poolList.push({
   saturday: '10AM - 5PM',
   sunday: '10AM - 5PM',
   map: 'https://google.com/maps/place/Garfield+Pool/@37.7500704,-122.4141837,17z/data=!3m1!4b1!4m5!3m4!1s0x808f7e4f57d753cd:0x961382f699804bc6!8m2!3d37.7500704!4d-122.411995',
+  maps: {
+    lat: 37.7594696,
+    long: -122.4248613
+  },
   special: 'Swim Practice Tuesdays 5:30PM - 7PM'
 });
 

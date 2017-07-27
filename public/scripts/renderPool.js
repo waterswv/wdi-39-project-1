@@ -89,12 +89,18 @@ function renderPool(pool){
               </section>
             </div>
           <!-- Pool Info Column End -->
-          <!--
-          <section class="map">
-            <div id="dummy-map">
-              <div>MAP</div>
+
+
+          <!--Pool Info Map Section Begin-->
+            <div class="col-sm-6 col-md-4">
+              <section class="map">
+                <div id="dummy-map">
+                  
+                </div>
+              </section>
             </div>
-          </section> -->
+          <!-- Pool Info Map Section End-->
+
         </div>
         <!--Pool Info End -->`;
 
