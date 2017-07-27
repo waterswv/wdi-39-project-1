@@ -2,7 +2,7 @@
 var db = require('../models');
 
 
-// POST '/api/albums/:albumId/songs'
+// POST '/api/pools/:poolId/events'
 function create(req, res) {
   db.Pool.findById(req.params.poolId, function(err, foundPool) {
     console.log(req.body);
@@ -15,7 +15,25 @@ function create(req, res) {
   });
 }
 
+// DELETE '/api/pools/:poolId/events/:eventId'
+function destroy(req, res) {
+    db.Pool.findById(req.params.poolId, function (err, foundPool) {
+     if (err) {console.log('error finding Pool', err);}
+     // we've got the Pool, now find the event within it
+     let correctEvent = foundPool.events.id(req.params.eventId);
+     if (correctEvent) {
+       correctEvent.remove();
+       // resave the Pool now that the event is gone
+       foundPool.save(function(err, saved) {
+         console.log('REMOVED ', correctEvent.title, 'FROM ', saved.events);
+         res.json(correctEvent);
+       });
+
+     }
+});
+}
 
 module.exports = {
-  create: create
+  create: create,
+  destroy: destroy
 };

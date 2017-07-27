@@ -36,6 +36,7 @@ app.delete('/api/pools/:id', controllers.pools.destroy);
 
 // Events routes
 app.post('/api/pools/:poolId/events', controllers.events.create);
+app.delete('/api/pools/:poolId/events/:eventId', controllers.events.destroy);
 
 
 
