@@ -18,6 +18,10 @@ let PoolSchema = new Schema({
   sunday: String,
   special: String,
   map: String,
+  maps: {
+    lat: Number,
+    long: Number
+  },
   events: [Events.schema]
 })
 
