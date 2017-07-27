@@ -53,6 +53,10 @@ function listenDeletePool(){
   });
 }
 
+function listenAddEvent(){
+
+}
+
 function handleNewPoolSuccess(newPool){
   console.log("new pool success", newPool);
   renderPool(newPool);
