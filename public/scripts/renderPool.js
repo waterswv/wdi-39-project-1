@@ -63,7 +63,7 @@ function renderPool(pool){
                 </div>
 
                 <!-- ADD EVENT -->
-                <div class="" id="add-event">
+                <div class="add-event">
                   <h4>Add an Event</h4>
 
                   <form action="index.html" method="post">
