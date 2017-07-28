@@ -19,28 +19,10 @@ function index(req, res) {
 
   // Find all objects in the database that are in the Pool Schema.
   db.Pool.find({}, function(err, pools) {
-
     if (err) {
       console.log("Error", err);
     }
-    pools.forEach(function (pool) {
-      //  if (pools.maps.lat == null) {
-          // geocode API
-          var geocodeParams = {
-            "address": pool.address,
-          };
-
-          gmAPI.geocode(geocodeParams, function(err, result){
-            console.log("the result is ", result);
-            console.log("the latitude is ", result.results[0].geometry.location.lat);
-            console.log("the longitude is ", result.results[0].geometry.location.lng);
-            pool.maps.lat = result.results[0].geometry.location.lat;
-            pool.maps.long = result.results[0].geometry.location.lng;
-            pool.save();
-          });
-
-        //}
-      });
+    renderMapLatLng(pools);
     res.json(pools);
   });
 }
@@ -54,6 +36,7 @@ function show(req, res) {
     if (err) {
       console.log("Error finding ID", err);
     }
+    renderMapLatLng(pool);
     res.json(pool);
   });
 
@@ -66,6 +49,7 @@ function create(req, res) {
     if (err){
       console.log('unable to create new pool error', err);
     }
+    createNewPool(pool);
     res.json(pool);
   })
 }
@@ -86,6 +70,37 @@ function destroy(req, res) {
   });
 }
 
+// Non Route Functions:
+// renderMapLatLng checks to see if the
+function renderMapLatLng (pools) {
+  pools.forEach(function (pool) {
+      // geocode API
+      var geocodeParams = {
+        "address": pool.address,
+      };
+      gmAPI.geocode(geocodeParams, function(err, result){
+        console.log("the result is ", result);
+        pool.maps.lat = result.results[0].geometry.location.lat;
+        pool.maps.long = result.results[0].geometry.location.lng;
+        pool.save();
+        console.log('the pool LatLng is ', pool.maps);
+      });
+  });
+}
+
+function createNewPool (pool){
+  // geocode API
+  var geocodeParams = {
+    "address": pool.address,
+  };
+  gmAPI.geocode(geocodeParams, function(err, result){
+    console.log("the result is ", result);
+    pool.maps.lat = result.results[0].geometry.location.lat;
+    pool.maps.long = result.results[0].geometry.location.lng;
+    pool.save();
+    console.log('the pool LatLng is ', pool.maps);
+  });
+}
 // controllers/poolsController.js
 module.exports = {
   index: index,
