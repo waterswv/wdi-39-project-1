@@ -1,5 +1,51 @@
-.row, .col-sm-6, .col-sm-4, .col-sm-1, .col-sm-2 {
+/*Developer view for layout*/
+/*.row, .col-sm-6, .col-sm-4, .col-sm-1, .col-sm-2 {
   border: 1px dashed grey;
+}*/
+
+/* FONTS IN USE
+font-family: 'Montserrat', sans-serif;
+font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Mada', sans-serif;
+*/
+
+body {
+  background-color: #F5F8FA;
+  color: #292B2C;
+  font-family: 'Mada', sans-serif;
+}
+
+div{
+  border-radius: 6px;
+}
+
+input {
+  /*border-radius: 3px;*/
+  /*background-color: #e2e2e2;*/
+  margin: 3px 0;
+}
+
+.btn {
+  background-color: #e2e2e2;
+}
+
+.form-control {
+  background-color: #e2e2e2;
+}
+
+nav {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+header, nav {
+  background-color: #3097D1;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav a {
+  color: inherit;
 }
 
 p {
@@ -10,6 +56,26 @@ p {
 h1, h2, h3, h4 {
   padding: 10px 0;
   margin: 0;
+}
+
+h3, h4 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+ font-size: 2.2em;
+}
+
+h3 {
+ font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1.2em;
 }
 .container {
   /*max-width: 900px;*/
@@ -22,16 +88,31 @@ h1, h2, h3, h4 {
   margin-bottom: 40px;*/
 }
 
+.pool, #add-pool {
+  background-color: #FFFFFF;
+  border: 1px solid #DFDFDF;
+}
+
 .pool-header button {
   display: block;
   float: right;
   margin-top: 5px;
 }
 
-/*Delete Event Button (X glyphicon)*/
+.pool p {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/*Delete Event Button (X glyphicon)
+http://glyphicons.com/
+*/
 .delete-event {
   border: none;
   background-color: inherit;
+  color: #b2b2b2;
+  font-weight: 200;
+  float: right;
 }
 
 .pool h2 {
@@ -70,6 +151,26 @@ h1, h2, h3, h4 {
   padding: 10px;
 }
 
+.pool-header {
+  border-bottom: 1px solid #DFDFDF;
+  border-radius: 0;
+}
+
+.op-hours {
+  border-top: 1px solid #DFDFDF;
+  border-radius: 0;
+}
+
+.add-event h4 {
+  border-top: 1px solid #DFDFDF;
+  border-radius: 0;
+}
+
+.contact {
+  padding: 5px 0;
+}
+
+
 .search {
   float: right;
   margin-top: 20px;
@@ -87,6 +188,7 @@ h1, h2, h3, h4 {
 
 footer {
   height: 50px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 footer nav {
