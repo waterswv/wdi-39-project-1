@@ -10,8 +10,16 @@ function renderPool(pool){
             <!--Pool Info Column Begin-->
             <div class="col-sm-6 col-md-4">
 
-              <h2>${pool.name}</h2>
+              <div class="pool-header clearfix">
               <button class="pool-delete-btn">Delete Pool</button>
+              <h2>${pool.name}</h2>
+              </div>
+
+              <section class="contact">
+                <p>${pool.address}</p>
+                <p>${pool.phoneNumber}</p>
+                <p>${pool.contactEmail}</p>
+              </section>
 
               <section class="op-hours">
                   <h3>Hours of Operation</h3>
@@ -51,12 +59,6 @@ function renderPool(pool){
             <!-- Pool Info Column Begin-->
             <div class="col-sm-6 col-md-4">
 
-              <section class="contact">
-                <p>${pool.address}</p>
-                <p>${pool.phoneNumber}</p>
-                <p>${pool.contactEmail}</p>
-              </section>
-
               <section class="events">
                 <h3>Events and Schedule Alerts</h3>
                 <div data-pool-events-id='${pool._id}'>
@@ -95,7 +97,7 @@ function renderPool(pool){
             <div class="col-sm-6 col-md-4">
               <section class="map">
                 <div id="dummy-map">
-                  
+
                 </div>
               </section>
             </div>
