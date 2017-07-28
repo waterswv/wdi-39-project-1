@@ -10,7 +10,7 @@ function renderPool(pool){
       <!--Pool Info Column 1 Begin-->
       <div class="col-sm-6 col-md-4">
         <div class="pool-header clearfix">
-          <button class="pool-delete-btn">Delete Pool</button>
+          <button class="pool-delete-btn btn btn-default">Delete Pool</button>
           <h2>${pool.name}</h2>
         </div>
         <section class="contact">
@@ -61,16 +61,16 @@ function renderPool(pool){
             <h4>Add an Event</h4>
             <form action="index.html" method="post">
               <div class="row">
-                <div class="col-sm-6"><input type="text" name="dayOfWeek" value="" placeholder="Day of Week"></div>
-                <div class="col-sm-6"><input type="text" name="title"  value="" placeholder="Title"></div>
+                <div class="col-sm-6"><input class="form-control" type="text" name="dayOfWeek" value="" placeholder="Day of Week"></div>
+                <div class="col-sm-6"><input class="form-control" type="text" name="title"  value="" placeholder="Title"></div>
               </div>
               <div class="row">
-                <div class="col-sm-6"><input type="text" name="startTime" value="" placeholder="Start Time"></div>
-                <div class="col-sm-6"><input type="text" name="endTime" value="" placeholder="End Time"></div>
+                <div class="col-sm-6"><input class="form-control" type="text" name="startTime" value="" placeholder="Start Time"></div>
+                <div class="col-sm-6"><input class="form-control" type="text" name="endTime" value="" placeholder="End Time"></div>
               </div>
               <div class="row">
-                <div class="col-sm-6"><input type="text" name="description" value="" placeholder="Description"></div>
-                <div class="col-sm-6"><input type="submit" name="submit" value="Submit"></div>
+                <div class="col-sm-6"><input class="form-control" type="text" name="description" value="" placeholder="Description"></div>
+                <div class="col-sm-6"><input class="form-control" class="btn btn-default" type="submit" name="submit" value="Submit"></div>
               </div>
             </form>
           </div>
@@ -85,7 +85,9 @@ function renderPool(pool){
         </section>
       </div><!-- Pool Info Map Section End-->
     </div>
-  </div><!--Pool Info End -->`;
+  </div><!--Pool Info End -->
+
+  `;
 
   $('.main').prepend(poolHTML);
 }
