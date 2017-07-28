@@ -1,5 +1,16 @@
 // require db to use models
 let db = require('../models');
+var GoogleMapsAPI = require('googlemaps');
+
+// importing google maps:
+var publicConfig = {
+  key: 'AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg',
+  stagger_time:       1000, // for elevationPath
+  encode_polylines:   false,
+  secure:             true, // use https
+  //proxy:              'http://127.0.0.1:9999' // optional, set a proxy for HTTP requests
+};
+var gmAPI = new GoogleMapsAPI(publicConfig);
 
 // setup functions for end-points
 function index(req, res) {
@@ -7,12 +18,30 @@ function index(req, res) {
   console.log('This route shows all Pools.');
 
   // Find all objects in the database that are in the Pool Schema.
-  db.Pool.find({}, function(err, pool) {
+  db.Pool.find({}, function(err, pools) {
 
     if (err) {
       console.log("Error", err);
     }
-    res.json(pool);
+    pools.forEach(function (pool) {
+      //  if (pools.maps.lat == null) {
+          // geocode API
+          var geocodeParams = {
+            "address": pool.address,
+          };
+
+          gmAPI.geocode(geocodeParams, function(err, result){
+            console.log("the result is ", result);
+            console.log("the latitude is ", result.results[0].geometry.location.lat);
+            console.log("the longitude is ", result.results[0].geometry.location.lng);
+            pool.maps.lat = result.results[0].geometry.location.lat;
+            pool.maps.long = result.results[0].geometry.location.lng;
+            pool.save();
+          });
+
+        //}
+      });
+    res.json(pools);
   });
 }
 
