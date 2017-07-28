@@ -28,6 +28,12 @@ h1, h2, h3, h4 {
   margin-top: 5px;
 }
 
+/*Delete Event Button (X glyphicon)*/
+.delete-event {
+  border: none;
+  background-color: inherit;
+}
+
 .pool h2 {
   float: left;
 }

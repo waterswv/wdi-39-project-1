@@ -25,6 +25,12 @@ $(document).ready(function(){
     });
     $(this).trigger('reset');
   });
+
+  // "Admin Log In" to toggle admin controls in and out of view
+  $('#admin').on('click', function(){
+    $('.pool-header button').toggle();
+    $('.delete-event').toggle();
+  });
 });
 
 // any time there's an ajax call, re-attach listeners on all the delete pool btns
