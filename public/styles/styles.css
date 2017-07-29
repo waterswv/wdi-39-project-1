@@ -5,6 +5,10 @@ font-family: 'Merriweather Sans', sans-serif;
 font-family: 'Mada', sans-serif;
 */
 
+.event {
+  color: red;
+}
+
 body {
   background-color: #F5F8FA;
   color: #292B2C;
