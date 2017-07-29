@@ -123,9 +123,7 @@ function handleNewPoolSuccess(newPool){
     renderEvent(eventsDiv, element);
   });
   // remove event listeners such that adding event listeners accross page on ajax complete does not duplicate event listeners
-  $('.pool-delete-btn').off();
-  $('.add-event form').off();
-  $('.delete-event').off();
+  removeEventListeners();
 }
 
 function handlePoolDeleteSuccess(deletedPool){

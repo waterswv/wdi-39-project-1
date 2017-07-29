@@ -92,7 +92,7 @@ h4 {
   display: block;
   float: right;
   margin-top: 5px;
-  display: none;
+  /*display: none;*/
 }
 
 .pool p {
@@ -108,7 +108,7 @@ http://glyphicons.com/
   background-color: inherit;
   color: #b2b2b2;
   font-weight: 200;
-  display: none;
+  /*display: none;*/
 }
 
 .pool h2 {
@@ -139,7 +139,7 @@ http://glyphicons.com/
 }
 
 #add-pool {
-  display: none;
+  /*display: none;*/
 }
 
 .map {
@@ -157,7 +157,7 @@ http://glyphicons.com/
 }
 
 .add-event {
-  display: none;
+  /*display: none;*/
 }
 
 .add-event h4 {
