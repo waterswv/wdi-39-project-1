@@ -4,6 +4,7 @@ function renderPool(pool){
   console.log(pool.name, pool.monday);
 
   let poolHTML = `
+
   <!--Beginning of Pool Data-->
   <div class="pool col-xs-12" data-pool-id="${pool._id}">
     <div class="row">
@@ -20,31 +21,31 @@ function renderPool(pool){
         </section>
         <section class="op-hours">
           <h3>Hours of Operation</h3>
-          <div class="row">
+          <div class="row" id="monday">
             <p class="col-sm-6">Monday</p>
             <p class="col-sm-6">${pool.monday}</p>
           </div>
-          <div class="row">
+          <div class="row" id="tuesday">
             <p class="col-sm-6">Tuesday</p>
             <p class="col-sm-6">${pool.tuesday}</p>
           </div>
-          <div class="row">
+          <div class="row" id="wednesday">
             <p class="col-sm-6">Wednesday</p>
             <p class="col-sm-6">${pool.wednesday}</p>
           </div>
-          <div class="row">
+          <div class="row" id="thursday">
             <p class="col-sm-6">Thursday</p>
             <p class="col-sm-6">${pool.thursday}</p>
           </div>
-          <div class="row">
+          <div class="row" id="friday">
             <p class="col-sm-6">Friday</p>
             <p class="col-sm-6">${pool.friday}</p>
           </div>
-          <div class="row">
+          <div class="row" id="saturday">
             <p class="col-sm-6">Saturday</p>
             <p class="col-sm-6">${pool.saturday}</p>
           </div>
-          <div class="row">
+          <div class="row" id="sunday">
             <p class="col-sm-6">Sunday</p>
             <p class="col-sm-6">${pool.sunday}</p>
           </div>
