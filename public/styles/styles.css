@@ -88,6 +88,7 @@ h4 {
   display: block;
   float: right;
   margin-top: 5px;
+  display: none;
 }
 
 .pool p {
@@ -103,7 +104,7 @@ http://glyphicons.com/
   background-color: inherit;
   color: #b2b2b2;
   font-weight: 200;
-  /*float: right;*/
+  display: none;
 }
 
 .pool h2 {
@@ -133,6 +134,10 @@ http://glyphicons.com/
   margin-bottom: 20px;
 }
 
+#add-pool {
+  display: none;
+}
+
 .map {
   padding: 10px;
 }
@@ -145,6 +150,10 @@ http://glyphicons.com/
 .op-hours {
   border-top: 1px solid #DFDFDF;
   border-radius: 0;
+}
+
+.add-event {
+  display: none;
 }
 
 .add-event h4 {

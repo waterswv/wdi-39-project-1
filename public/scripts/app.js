@@ -30,6 +30,8 @@ $(document).ready(function(){
   $('#admin').on('click', function(){
     $('.pool-header button').toggle();
     $('.delete-event').toggle();
+    $('#add-pool').toggle();
+    $('.add-event').toggle();
   });
 });
 
