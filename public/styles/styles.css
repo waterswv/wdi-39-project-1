@@ -25,7 +25,7 @@ input {
   background-color: #e2e2e2;
 }
 
-.form-control {
+.submit {
   background-color: #e2e2e2;
 }
 
@@ -40,7 +40,8 @@ header, nav {
   font-family: 'Montserrat', sans-serif;
 }
 
-nav {
+.primary {
+  padding-bottom: 10px;
   margin-bottom: 20px;
 }
 

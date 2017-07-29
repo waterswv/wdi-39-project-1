@@ -72,7 +72,7 @@ function renderPool(pool){
               </div>
               <div class="row">
                 <div class="col-sm-6"><input class="form-control" type="text" name="description" value="" placeholder="Description"></div>
-                <div class="col-sm-6"><input class="form-control" class="btn btn-default" type="submit" name="submit" value="Submit"></div>
+                <div class="col-sm-6"><input class="form-control submit" class="btn btn-default" type="submit" name="submit" value="Submit"></div>
               </div>
             </form>
           </div>
