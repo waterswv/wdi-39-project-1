@@ -22,7 +22,8 @@ let PoolSchema = new Schema({
     lat: Number,
     long: Number
   },
-  events: [Events.schema]
+  events: [Events.schema],
+  tags: [String]
 })
 
 let Pool = mongoose.model('Pool', PoolSchema);
