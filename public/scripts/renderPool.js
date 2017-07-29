@@ -76,18 +76,18 @@ function renderPool(pool){
 
       <div class="col-sm-6 col-md-4"> <!--Pool Info Column 2 Begin-->
         <section class="events">
-          <h3>Events and Schedule Alerts</h3>
+          <!--
           <div data-pool-events-id='${pool._id}' class="clearfix">
-            <!-- NEW EVENTS WILL GO HERE -->
           </div>
+          -->
 
           <!-- ADD EVENT SECTION-->
           <div class="add-event">
             <h4>Add an Event</h4>
             <form action="index.html" method="post">
               <div class="row">
-                <div class="col-sm-6"><input class="form-control" type="text" name="dayOfWeek" value="" placeholder="Day of Week"></div>
-                <div class="col-sm-6"><input class="form-control" type="text" name="title"  value="" placeholder="Title"></div>
+                <div class="col-sm-6"><input class="form-control" type="text" name="dayOfWeek" value="" placeholder="Day of Week" required></div>
+                <div class="col-sm-6"><input class="form-control" type="text" name="title"  value="" placeholder="Title" required></div>
               </div>
               <div class="row">
                 <div class="col-sm-6"><input class="form-control" type="text" name="startTime" value="" placeholder="Start Time"></div>
