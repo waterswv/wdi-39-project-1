@@ -3,7 +3,7 @@ function renderEvent(poolDiv, element){
   let eventDay = element.dayOfWeek.toLowerCase();
   console.log("event day is: ", eventDay);
 
-  $(poolDiv).append(
+  $(poolDiv).find(`#${eventDay}`).append(
     `
       <div class="row event">
         <p class="col-sm-6">${element.title}:</p>
