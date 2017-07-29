@@ -44,13 +44,15 @@ function handleIndexSuccess(poolsData){
   // Render Pool data to page
   poolsData.forEach(function(pool){
     renderPool(pool);
-    let eventsDiv = `[data-pool-events-id=${pool._id}]`;
+    let poolDiv = `[data-pool-id=${pool._id}]`;
     pool.events.forEach(function(element){
       // console.log("EVENT load");
       // console.log(pool);
-      renderEvent(eventsDiv, element);
+      renderEvent(poolDiv, element);
     });
     console.log('the lat is ', pool.maps.lat);
+
+    // Insert Google Map
     let theLocation = {
       lat: pool.maps.lat,
       lng: pool.maps.long
@@ -117,10 +119,10 @@ function handleNewPoolSuccess(newPool){
   console.log("new pool success", newPool);
   renderPool(newPool);
   // get the div for the pool where we'll put events
-  let eventsDiv = `[data-pool-events-id=${newPool._id}]`;
+  let poolDiv = `[data-pool-id=${newPool._id}]`;
   newPool.events.forEach(function(element){
     console.log("new pool success event");
-    renderEvent(eventsDiv, element);
+    renderEvent(poolDiv, element);
   });
   // remove event listeners such that adding event listeners accross page on ajax complete does not duplicate event listeners
   removeEventListeners();
@@ -137,10 +139,10 @@ function handlePoolDeleteSuccess(deletedPool){
 
 function handleNewEventSuccess(pool){
   // create the target for where we're going to place the new event
-  let eventsDiv = `[data-pool-events-id=${pool._id}]`;
+  let poolDiv = `[data-pool-id=${pool._id}]`;
   // set event to add to be the last event listed in the pool response
   let eventToAdd = pool.events[pool.events.length-1];
-  renderEvent(eventsDiv, eventToAdd);
+  renderEvent(poolDiv, eventToAdd);
   removeEventListeners();
 }
 
