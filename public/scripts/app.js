@@ -46,8 +46,8 @@ function handleIndexSuccess(poolsData){
     renderPool(pool);
     let eventsDiv = `[data-pool-events-id=${pool._id}]`;
     pool.events.forEach(function(element){
-      console.log("EVENT load");
-      console.log(pool);
+      // console.log("EVENT load");
+      // console.log(pool);
       renderEvent(eventsDiv, element);
     });
     console.log('the lat is ', pool.maps.lat);

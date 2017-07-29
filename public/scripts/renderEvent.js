@@ -1,6 +1,9 @@
 function renderEvent(eventsDiv, element){
   // append event data to events div
-  $('#saturday').append(
+  let eventDay = element.dayOfWeek.toLowerCase();
+  console.log("event day is: ", eventDay);
+
+  $(`#${eventDay}`).append(
     `
       <div class="row event">
         <p class="col-sm-6">${element.title}:</p>

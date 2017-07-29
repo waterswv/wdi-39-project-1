@@ -63,12 +63,14 @@ function renderPool(pool){
               <p class="col-sm-6">${pool.saturday}</p>
             </div>
           </div>
+
           <div id="sunday">
             <div class="row">
               <p class="col-sm-6">Sunday</p>
               <p class="col-sm-6">${pool.sunday}</p>
             </div>
           </div>
+
         </section>
       </div> <!--Pool Info Column 1 End-->
 
