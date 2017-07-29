@@ -136,10 +136,9 @@ function handlePoolDeleteSuccess(deletedPool){
 }
 
 function handleNewEventSuccess(pool){
-  let id = pool._id;
-  // console.log("new event stored in pool with id: ", id)
+  // create the target for where we're going to place the new event
   let eventsDiv = `[data-pool-events-id=${pool._id}]`;
-  // let event to add be the last event listed in the pool response
+  // set event to add to be the last event listed in the pool response
   let eventToAdd = pool.events[pool.events.length-1];
   renderEvent(eventsDiv, eventToAdd);
   removeEventListeners();

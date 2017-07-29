@@ -1,9 +1,5 @@
-/*Developer view for layout*/
-/*.row, .col-sm-6, .col-sm-4, .col-sm-1, .col-sm-2 {
-  border: 1px dashed grey;
-}*/
-
-/* FONTS IN USE
+/*
+FONTS IN USE:
 font-family: 'Montserrat', sans-serif;
 font-family: 'Merriweather Sans', sans-serif;
 font-family: 'Mada', sans-serif;
@@ -44,6 +40,10 @@ header, nav {
   font-family: 'Montserrat', sans-serif;
 }
 
+nav {
+  margin-bottom: 20px;
+}
+
 nav a {
   color: inherit;
 }
@@ -77,16 +77,6 @@ h3 {
 h4 {
   font-size: 1.2em;
 }
-.container {
-  /*max-width: 900px;*/
-  /*margin-top: 40px;
-  margin-bottom: 40px;*/
-}
-
-.main {
-  /*margin-top: 40px;
-  margin-bottom: 40px;*/
-}
 
 .pool, #add-pool {
   background-color: #FFFFFF;
@@ -112,7 +102,7 @@ http://glyphicons.com/
   background-color: inherit;
   color: #b2b2b2;
   font-weight: 200;
-  float: right;
+  /*float: right;*/
 }
 
 .pool h2 {
@@ -128,11 +118,6 @@ http://glyphicons.com/
   height: 0;
 }
 
-
-#add-pool{
-  margin: 20px;
-}
-
 #add-pool input {
   padding: 5px;
   margin: 5px;
@@ -142,9 +127,9 @@ http://glyphicons.com/
   margin: 5px;
 }
 
-.pool {
-  margin-top: 40px;
-  margin-bottom: 40px;
+.pool, #add-pool {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .map {
@@ -187,12 +172,14 @@ http://glyphicons.com/
 }
 
 footer {
+  margin-top: 20px;
   height: 50px;
   font-family: 'Montserrat', sans-serif;
 }
 
 footer nav {
   text-align: center;
+  border-radius: 6px;
 }
 
 footer nav a {
