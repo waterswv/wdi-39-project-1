@@ -66,7 +66,8 @@ function handleIndexSuccess(poolsData){
         map: map,
       });
   });
-  // After indexing all the pools, show only the current day
+  // After indexing all the pools, hide admin and show only the current day
+  hideAdmin();
   showCurrentDay();
 }
 
@@ -183,7 +184,14 @@ function toggleAdmin(){
   $('.add-event').parent().parent().toggle();
 }
 
+function hideAdmin(){
+  $('.pool-header button').hide();
+  $('.delete-event').hide();
+  $('#add-pool').hide();
+  $('.add-event').parent().parent().hide();
+}
+
 function showCurrentDay(){
-  $('.day-of-week').next().hide();
-  // $('.monday').children().last().show();
+  $('.event-holder').hide();
+  $('.monday .event-holder').show();
 }
