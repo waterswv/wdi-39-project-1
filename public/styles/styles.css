@@ -178,7 +178,14 @@ http://glyphicons.com/
   float: right;
   margin-top: 20px;
 }
-
+.image {
+  margin-top: 10px;
+}
+img {
+  height: 250px;
+  width: 100%;
+  border-radius: 15px;
+}
 #dummy-map{
   height: 250px;
   width: 100%

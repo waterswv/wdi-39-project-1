@@ -89,6 +89,9 @@ function renderPool(pool){
       </div> <!--Pool Info Column 1 End-->
 
       <div class="col-sm-6 col-md-4"> <!--Pool Info Column 2 Begin-->
+        <section class="image">
+        <img src='${pool.imageURL}' alt='pool image'/>
+        </section>
         <section class="events">
           <!--
           <div data-pool-events-id='${pool._id}' class="clearfix">
