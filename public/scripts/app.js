@@ -28,11 +28,9 @@ $(document).ready(function(){
 
   // "Admin Log In" to toggle admin controls in and out of view
   $('#admin').on('click', function(){
-    $('.pool-header button').toggle();
-    $('.delete-event').toggle();
-    $('#add-pool').toggle();
-    $('.add-event').parent().parent().toggle();
+    toggleAdmin();
   });
+
 });
 
 // any time there's an ajax call, re-attach listeners on all the delete pool btns
@@ -68,6 +66,8 @@ function handleIndexSuccess(poolsData){
         map: map,
       });
   });
+  // After indexing all the pools, show only the current day
+  showCurrentDay();
 }
 
 function listenDeletePool(){
@@ -168,11 +168,22 @@ function listenDayClick(){
     $(this).next().toggle(200);
   });
 }
-
 // remove event listeners such that adding event listeners accross page on ajax complete does not duplicate event listeners
 function removeEventListeners(){
   $('.pool-delete-btn').off();
   $('.add-event form').off();
   $('.delete-event').off();
   $('.day-of-week').off();
+}
+
+function toggleAdmin(){
+  $('.pool-header button').toggle();
+  $('.delete-event').toggle();
+  $('#add-pool').toggle();
+  $('.add-event').parent().parent().toggle();
+}
+
+function showCurrentDay(){
+  $('.day-of-week').next().hide();
+  // $('.monday').children().last().show();
 }
