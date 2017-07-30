@@ -93,11 +93,6 @@ function renderPool(pool){
         <img src='${pool.imageURL}' alt='pool image'/>
         </section>
         <section class="events">
-          <!--
-          <div data-pool-events-id='${pool._id}' class="clearfix">
-          </div>
-          -->
-
           <!-- ADD EVENT SECTION-->
           <div class="add-event">
             <h4>Add an Event</h4>
@@ -131,6 +126,7 @@ function renderPool(pool){
     <div class="col-xs-12 pool-tags" data-pool-id="${pool._id}">
     </div>
   </div><!--Pool Info End -->
+
 
   `;
 

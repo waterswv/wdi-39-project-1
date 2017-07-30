@@ -6,7 +6,7 @@ function renderEvent(poolDiv, element){
   $(poolDiv).find(`.${eventDay}`).children().last().append(
     `
       <div class='event row' id='${element._id}'>
-        <div class="col-xs-5 col-xs-offset-1">${element.title}</div>
+        <div class="col-xs-6">${element.title}</div>
         <div class="col-xs-4"> ${element.startTime} - ${element.endTime}</div>
         <div class="col-xs-2">
           <button class='delete-event'>
