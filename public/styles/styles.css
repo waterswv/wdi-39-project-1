@@ -5,6 +5,12 @@ font-family: 'Merriweather Sans', sans-serif;
 font-family: 'Mada', sans-serif;
 */
 
+.event-holder {
+  /*color: red;*/
+  font-size: .9em;
+  background-color: #dbf2ff;
+}
+
 body {
   background-color: #F5F8FA;
   color: #292B2C;
@@ -89,7 +95,7 @@ h4 {
   display: block;
   float: right;
   margin-top: 5px;
-  display: none;
+  /*display: none;*/
 }
 
 .pool p {
@@ -105,7 +111,7 @@ http://glyphicons.com/
   background-color: inherit;
   color: #b2b2b2;
   font-weight: 200;
-  display: none;
+  /*display: none;*/
 }
 
 .pool h2 {
@@ -136,7 +142,7 @@ http://glyphicons.com/
 }
 
 #add-pool {
-  display: none;
+  /*display: none;*/
 }
 
 .map {
@@ -151,10 +157,11 @@ http://glyphicons.com/
 .op-hours {
   border-top: 1px solid #DFDFDF;
   border-radius: 0;
+  font-size: 1.1em;
 }
 
 .add-event {
-  display: none;
+  /*display: none;*/
 }
 
 .add-event h4 {

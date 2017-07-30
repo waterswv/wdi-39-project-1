@@ -4,6 +4,7 @@ function renderPool(pool){
   console.log(pool.name, pool.monday);
 
   let poolHTML = `
+
   <!--Beginning of Pool Data-->
   <div class="pool col-xs-12" data-pool-id="${pool._id}">
     <div class="row">
@@ -20,51 +21,87 @@ function renderPool(pool){
         </section>
         <section class="op-hours">
           <h3>Hours of Operation</h3>
-          <div class="row">
-            <p class="col-sm-6">Monday</p>
-            <p class="col-sm-6">${pool.monday}</p>
+
+          <div class="monday">
+            <div class="row day-of-week">
+              <p class="col-xs-6">Monday</p>
+              <p class="col-xs-6">${pool.monday}</p>
+            </div>
+            <div class="event-holder">
+            </div>
           </div>
-          <div class="row">
-            <p class="col-sm-6">Tuesday</p>
-            <p class="col-sm-6">${pool.tuesday}</p>
+
+          <div class="tuesday">
+            <div class="row day-of-week">
+              <p class="col-xs-6">Tuesday</p>
+              <p class="col-xs-6">${pool.tuesday}</p>
+            </div>
+            <div class="event-holder">
+            </div>
           </div>
-          <div class="row">
-            <p class="col-sm-6">Wednesday</p>
-            <p class="col-sm-6">${pool.wednesday}</p>
+
+          <div class="wednesday">
+            <div class="row day-of-week">
+              <p class="col-xs-6">Wednesday</p>
+              <p class="col-xs-6">${pool.wednesday}</p>
+            </div>
+            <div class="event-holder">
+            </div>
           </div>
-          <div class="row">
-            <p class="col-sm-6">Thursday</p>
-            <p class="col-sm-6">${pool.thursday}</p>
+
+          <div class="thursday">
+            <div class="row day-of-week">
+              <p class="col-xs-6">Thursday</p>
+              <p class="col-xs-6">${pool.thursday}</p>
+            </div>
+            <div class="event-holder">
+            </div>
           </div>
-          <div class="row">
-            <p class="col-sm-6">Friday</p>
-            <p class="col-sm-6">${pool.friday}</p>
+
+          <div class="friday">
+            <div class="row day-of-week">
+              <p class="col-xs-6">Friday</p>
+              <p class="col-xs-6">${pool.friday}</p>
+            </div>
+            <div class="event-holder">
+            </div>
           </div>
-          <div class="row">
-            <p class="col-sm-6">Saturday</p>
-            <p class="col-sm-6">${pool.saturday}</p>
+
+          <div class="saturday">
+            <div class="row day-of-week">
+              <p class="col-xs-6">Saturday</p>
+              <p class="col-xs-6">${pool.saturday}</p>
+            </div>
+            <div class="event-holder">
+            </div>
           </div>
-          <div class="row">
-            <p class="col-sm-6">Sunday</p>
-            <p class="col-sm-6">${pool.sunday}</p>
+
+          <div class="sunday">
+            <div class="row day-of-week">
+              <p class="col-xs-6">Sunday</p>
+              <p class="col-xs-6">${pool.sunday}</p>
+            </div>
+            <div class="event-holder">
+            </div>
           </div>
+
         </section>
       </div> <!--Pool Info Column 1 End-->
 
       <div class="col-sm-6 col-md-4"> <!--Pool Info Column 2 Begin-->
         <section class="events">
-          <h3>Events and Schedule Alerts</h3>
+          <!--
           <div data-pool-events-id='${pool._id}' class="clearfix">
-            <!-- NEW EVENTS WILL GO HERE -->
           </div>
+          -->
 
           <!-- ADD EVENT SECTION-->
           <div class="add-event">
             <h4>Add an Event</h4>
             <form action="index.html" method="post">
               <div class="row">
-                <div class="col-sm-6"><input class="form-control" type="text" name="dayOfWeek" value="" placeholder="Day of Week"></div>
-                <div class="col-sm-6"><input class="form-control" type="text" name="title"  value="" placeholder="Title"></div>
+                <div class="col-sm-6"><input class="form-control" type="text" name="dayOfWeek" value="" placeholder="Day of Week" required></div>
+                <div class="col-sm-6"><input class="form-control" type="text" name="title"  value="" placeholder="Title" required></div>
               </div>
               <div class="row">
                 <div class="col-sm-6"><input class="form-control" type="text" name="startTime" value="" placeholder="Start Time"></div>

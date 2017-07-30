@@ -14,31 +14,31 @@
       </section>
       <section class="op-hours">
         <h3>Hours of Operation</h3>
-        <div class="row">
+        <div class="row" id="monday">
           <p class="col-sm-6">Monday</p>
           <p class="col-sm-6">${pool.monday}</p>
         </div>
-        <div class="row">
+        <div class="row" id="tuesday">
           <p class="col-sm-6">Tuesday</p>
           <p class="col-sm-6">${pool.tuesday}</p>
         </div>
-        <div class="row">
+        <div class="row" id="wednesday">
           <p class="col-sm-6">Wednesday</p>
           <p class="col-sm-6">${pool.wednesday}</p>
         </div>
-        <div class="row">
+        <div class="row" id="thursday">
           <p class="col-sm-6">Thursday</p>
           <p class="col-sm-6">${pool.thursday}</p>
         </div>
-        <div class="row">
+        <div class="row" id="friday">
           <p class="col-sm-6">Friday</p>
           <p class="col-sm-6">${pool.friday}</p>
         </div>
-        <div class="row">
+        <div class="row" id="saturday">
           <p class="col-sm-6">Saturday</p>
           <p class="col-sm-6">${pool.saturday}</p>
         </div>
-        <div class="row">
+        <div class="row" id="sunday">
           <p class="col-sm-6">Sunday</p>
           <p class="col-sm-6">${pool.sunday}</p>
         </div>
@@ -48,23 +48,25 @@
     <div class="col-sm-6 col-md-4"> <!--Pool Info Column 2 Begin-->
       <section class="events">
         <h3>Events and Schedule Alerts</h3>
-        <div >
+        <div data-pool-events-id='${pool._id}' class="clearfix">
+          <!-- NEW EVENTS WILL GO HERE -->
         </div>
+
         <!-- ADD EVENT SECTION-->
-        <div class="add-event" data-pool-events-id='${pool._id}'>
+        <div class="add-event">
           <h4>Add an Event</h4>
           <form action="index.html" method="post">
             <div class="row">
-              <div class="col-sm-6"><input type="text" name="dayOfWeek" value="" placeholder="Day of Week"></div>
-              <div class="col-sm-6"><input type="text" name="title"  value="" placeholder="Title"></div>
+              <div class="col-sm-6"><input class="form-control" type="text" name="dayOfWeek" value="" placeholder="Day of Week"></div>
+              <div class="col-sm-6"><input class="form-control" type="text" name="title"  value="" placeholder="Title"></div>
             </div>
             <div class="row">
-              <div class="col-sm-6"><input type="text" name="startTime" value="" placeholder="Start Time"></div>
-              <div class="col-sm-6"><input type="text" name="endTime" value="" placeholder="End Time"></div>
+              <div class="col-sm-6"><input class="form-control" type="text" name="startTime" value="" placeholder="Start Time"></div>
+              <div class="col-sm-6"><input class="form-control" type="text" name="endTime" value="" placeholder="End Time"></div>
             </div>
             <div class="row">
-              <div class="col-sm-6"><input type="text" name="description" value="" placeholder="Description"></div>
-              <div class="col-sm-6"><input class="btn btn-default" type="submit" name="submit" value="Submit"></div>
+              <div class="col-sm-6"><input class="form-control" type="text" name="description" value="" placeholder="Description"></div>
+              <div class="col-sm-6"><input class="form-control submit" class="btn btn-default" type="submit" name="submit" value="Submit"></div>
             </div>
           </form>
         </div>
