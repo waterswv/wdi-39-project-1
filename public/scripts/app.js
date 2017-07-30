@@ -176,6 +176,8 @@ function listenDayClick(){
     e.preventDefault();
     console.log('clicked a day of week div');
     $(this).next().toggle(200);
+    // toggle the show and hide glyphicons
+    $(this).find('.glyphicon').toggle();
   });
 }
 
@@ -191,7 +193,6 @@ function hideAdmin(){
   $('.delete-event').hide();
   $('#add-pool').hide();
   $('.add-event').hide();
-
 }
 
 function showCurrentDay(){

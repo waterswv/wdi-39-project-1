@@ -5,6 +5,17 @@ font-family: 'Merriweather Sans', sans-serif;
 font-family: 'Mada', sans-serif;
 */
 
+.show-hide > .glyphicon {
+  color: #3097D1;
+  font-size: .7em;
+}
+
+.show-hide > .glyphicon-minus {
+  display: none;
+}
+
+
+
 .event-holder {
   /*color: red;*/
   font-size: .9em;
@@ -115,7 +126,6 @@ http://glyphicons.com/
   background-color: inherit;
   color: #b2b2b2;
   font-weight: 200;
-  /*display: none;*/
 }
 
 .pool h2 {
@@ -176,7 +186,6 @@ http://glyphicons.com/
 .contact {
   padding: 5px 0;
 }
-
 
 .search {
   float: right;
