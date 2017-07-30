@@ -188,11 +188,12 @@ http://glyphicons.com/
 img {
   height: 250px;
   width: 100%;
-  border-radius: 15px;
+  border-radius: 5px;
+
 }
 #dummy-map{
   height: 250px;
-  width: 100%
+  width: 100%;
 
 }
 
