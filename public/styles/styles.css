@@ -6,7 +6,9 @@ font-family: 'Mada', sans-serif;
 */
 
 .event {
-  color: red;
+  /*color: red;*/
+  font-size: .9em;
+  background-color: #dbf2ff;
 }
 
 body {
@@ -154,6 +156,7 @@ http://glyphicons.com/
 .op-hours {
   border-top: 1px solid #DFDFDF;
   border-radius: 0;
+  font-size: 1.1em;
 }
 
 .add-event {

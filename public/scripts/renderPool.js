@@ -22,52 +22,52 @@ function renderPool(pool){
         <section class="op-hours">
           <h3>Hours of Operation</h3>
 
-          <div id="monday">
+          <div class="monday">
             <div class="row">
-              <p class="col-sm-6">Monday</p>
-              <p class="col-sm-6">${pool.monday}</p>
+              <p class="col-xs-6">Monday</p>
+              <p class="col-xs-6">${pool.monday}</p>
             </div>
           </div>
 
-          <div id="tuesday">
+          <div class="tuesday">
             <div class="row">
-              <p class="col-sm-6">Tuesday</p>
-              <p class="col-sm-6">${pool.tuesday}</p>
+              <p class="col-xs-6">Tuesday</p>
+              <p class="col-xs-6">${pool.tuesday}</p>
             </div>
           </div>
 
-          <div id="wednesday">
+          <div class="wednesday">
             <div class="row">
-              <p class="col-sm-6">Wednesday</p>
-              <p class="col-sm-6">${pool.wednesday}</p>
+              <p class="col-xs-6">Wednesday</p>
+              <p class="col-xs-6">${pool.wednesday}</p>
             </div>
           </div>
 
-          <div id="thursday">
+          <div class="thursday">
             <div class="row">
-              <p class="col-sm-6">Thursday</p>
-              <p class="col-sm-6">${pool.thursday}</p>
+              <p class="col-xs-6">Thursday</p>
+              <p class="col-xs-6">${pool.thursday}</p>
             </div>
           </div>
 
-          <div id="friday">
+          <div class="friday">
             <div class="row">
-              <p class="col-sm-6">Friday</p>
-              <p class="col-sm-6">${pool.friday}</p>
+              <p class="col-xs-6">Friday</p>
+              <p class="col-xs-6">${pool.friday}</p>
             </div>
           </div>
 
-          <div id="saturday">
+          <div class="saturday">
             <div class="row">
-              <p class="col-sm-6">Saturday</p>
-              <p class="col-sm-6">${pool.saturday}</p>
+              <p class="col-xs-6">Saturday</p>
+              <p class="col-xs-6">${pool.saturday}</p>
             </div>
           </div>
 
-          <div id="sunday">
+          <div class="sunday">
             <div class="row">
-              <p class="col-sm-6">Sunday</p>
-              <p class="col-sm-6">${pool.sunday}</p>
+              <p class="col-xs-6">Sunday</p>
+              <p class="col-xs-6">${pool.sunday}</p>
             </div>
           </div>
 

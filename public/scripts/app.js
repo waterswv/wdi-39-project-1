@@ -148,10 +148,10 @@ function handleNewEventSuccess(pool){
 
 function handleEventDeleteSuccess(eventDeleted){
   console.log("id of Deleted event: ", eventDeleted._id);
-  let eventDiv =$(`#${eventDeleted._id}`).parent();
+  // let eventDiv =$(`#${eventDeleted._id}`).parent();
 
-    $(`#${eventDeleted._id}`).parent().hide('slow', function(){
-      $(`#${eventDeleted._id}`).parent().remove();
+    $(`#${eventDeleted._id}`).parent().parent().hide('slow', function(){
+      $(`#${eventDeleted._id}`).parent().parent().remove();
     });
   removeEventListeners();
 }
