@@ -124,8 +124,8 @@ function renderPool(pool){
         </section>
       </div><!-- Pool Info Map Section End-->
     </div>
-    
-    <div class="col-xs-12 pool-tags">
+
+    <div class="col-xs-12 pool-tags" data-pool-id="${pool._id}">
     </div>
   </div><!--Pool Info End -->
 

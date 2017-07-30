@@ -49,7 +49,7 @@ function handleIndexSuccess(poolsData){
     let poolDiv = `[data-pool-id=${pool._id}]`;
     pool.events.forEach(function(element){
       console.log("(1)EVENT load element is: ", element);
-      renderEvent(eventsDiv, element);
+      renderEvent(poolDiv, element);
     });
 
     // pool.tags.forEach(function(poolTag){
@@ -57,7 +57,7 @@ function handleIndexSuccess(poolsData){
     //   $('.pool-tags').append(`<button type="button" class="btn btn-info btn-sm">
     //   <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>` + poolTag + " </button>" + `<span> </span>`);
     // });
-    renderTags(eventsDiv, pool);
+    renderTags(poolDiv, pool);
 
 
     console.log('(3)the lat is ', pool.maps.lat);
