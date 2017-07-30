@@ -23,51 +23,65 @@ function renderPool(pool){
           <h3>Hours of Operation</h3>
 
           <div class="monday">
-            <div class="row">
+            <div class="row day-of-week">
               <p class="col-xs-6">Monday</p>
               <p class="col-xs-6">${pool.monday}</p>
+            </div>
+            <div class="event-holder">
             </div>
           </div>
 
           <div class="tuesday">
-            <div class="row">
+            <div class="row day-of-week">
               <p class="col-xs-6">Tuesday</p>
               <p class="col-xs-6">${pool.tuesday}</p>
+            </div>
+            <div class="event-holder">
             </div>
           </div>
 
           <div class="wednesday">
-            <div class="row">
+            <div class="row day-of-week">
               <p class="col-xs-6">Wednesday</p>
               <p class="col-xs-6">${pool.wednesday}</p>
+            </div>
+            <div class="event-holder">
             </div>
           </div>
 
           <div class="thursday">
-            <div class="row">
+            <div class="row day-of-week">
               <p class="col-xs-6">Thursday</p>
               <p class="col-xs-6">${pool.thursday}</p>
+            </div>
+            <div class="event-holder">
             </div>
           </div>
 
           <div class="friday">
-            <div class="row">
+            <div class="row day-of-week">
               <p class="col-xs-6">Friday</p>
               <p class="col-xs-6">${pool.friday}</p>
+            </div>
+            <div class="event-holder">
             </div>
           </div>
 
           <div class="saturday">
-            <div class="row">
+            <div class="row day-of-week">
               <p class="col-xs-6">Saturday</p>
               <p class="col-xs-6">${pool.saturday}</p>
+            </div>
+            <div class="event-holder">
             </div>
           </div>
 
           <div class="sunday">
-            <div class="row">
+            <div class="row day-of-week">
               <p class="col-xs-6">Sunday</p>
               <p class="col-xs-6">${pool.sunday}</p>
+            </div>
+            <div class="event-holder">
             </div>
           </div>
 

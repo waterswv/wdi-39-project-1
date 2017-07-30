@@ -39,6 +39,8 @@ $(document).ready(function(){
 $(document).ajaxComplete(listenDeletePool);
 $(document).ajaxComplete(listenAddEvent);
 $(document).ajaxComplete(listenDeleteEvent);
+$(document).ajaxComplete(listenDayClick);
+
 
 function handleIndexSuccess(poolsData){
   // Render Pool data to page
@@ -102,7 +104,7 @@ function listenAddEvent(){
 function listenDeleteEvent(){
   $('.delete-event').on('click', function(e){
     e.preventDefault();
-    let eventId = $(this).attr('id');
+    let eventId = $(this).parent().parent().attr('id');
     let poolId = $(this).closest('.pool').data('pool-id');
     console.log("id of btn: ", eventId, "poolId", poolId);
     $.ajax({
@@ -112,7 +114,6 @@ function listenDeleteEvent(){
       error: handleError
     });
   })
-
 }
 
 function handleNewPoolSuccess(newPool){
@@ -148,10 +149,9 @@ function handleNewEventSuccess(pool){
 
 function handleEventDeleteSuccess(eventDeleted){
   console.log("id of Deleted event: ", eventDeleted._id);
-  // let eventDiv =$(`#${eventDeleted._id}`).parent();
 
-    $(`#${eventDeleted._id}`).parent().parent().hide('slow', function(){
-      $(`#${eventDeleted._id}`).parent().parent().remove();
+    $(`#${eventDeleted._id}`).hide('slow', function(){
+      $(`#${eventDeleted._id}`).remove();
     });
   removeEventListeners();
 }
@@ -160,9 +160,19 @@ function handleError(err){
   console.log(err);
 }
 
+function listenDayClick(){
+  // toggle events for a day of the week clicked
+  $('.day-of-week').on('click', function(e){
+    e.preventDefault();
+    console.log('clicked a day of week div');
+    $(this).next().toggle(200);
+  });
+}
+
 // remove event listeners such that adding event listeners accross page on ajax complete does not duplicate event listeners
 function removeEventListeners(){
   $('.pool-delete-btn').off();
   $('.add-event form').off();
   $('.delete-event').off();
+  $('.day-of-week').off();
 }
