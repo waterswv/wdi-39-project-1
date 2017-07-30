@@ -10,7 +10,7 @@ $(document).ready(function(){
     error: handleError
   });
 
-  // ADD POOL FORM EVENT LISTENER AND AJAX CALL
+  // ADD POOL EVENT LISTENER AND AJAX CALL
   $('#add-pool form').on('submit', function(e){
     e.preventDefault();
     console.log("add-pool form submitted");
@@ -26,14 +26,18 @@ $(document).ready(function(){
     $(this).trigger('reset');
   });
 
-  // "Admin Log In" to toggle admin controls in and out of view
+  // Admin Log In to toggle admin controls in and out of view
   $('#admin').on('click', function(){
     toggleAdmin();
   });
 
 });
 
-// any time there's an ajax call, re-attach listeners on all the delete pool btns
+// Any time there's an ajax call, re-attach all the event listeners
+//  Event listeners are removed at the end of each handleSuccess function
+//  They are re-attached here when ajax calls are complete
+//  This process is to ensure that the listeners are applied to elements added to the page only once
+
 $(document).ajaxComplete(listenDeletePool);
 $(document).ajaxComplete(listenAddEvent);
 $(document).ajaxComplete(listenDeleteEvent);
@@ -45,14 +49,13 @@ function handleIndexSuccess(poolsData){
   poolsData.forEach(function(pool){
     renderPool(pool);
     let poolDiv = `[data-pool-id=${pool._id}]`;
+    // For each pool, render the events for that pool
     pool.events.forEach(function(element){
-      // console.log("EVENT load");
-      // console.log(pool);
       renderEvent(poolDiv, element);
     });
-    console.log('the lat is ', pool.maps.lat);
 
     // Insert Google Map
+    console.log('the lat is ', pool.maps.lat);
     let theLocation = {
       lat: pool.maps.lat,
       lng: pool.maps.long
@@ -68,6 +71,7 @@ function handleIndexSuccess(poolsData){
   });
   // After indexing all the pools, hide admin and show only the current day
   hideAdmin();
+  // For now this simply shows Monday (Later it will show the current day of week on which the site is visited)
   showCurrentDay();
 }
 
@@ -135,7 +139,6 @@ function handlePoolDeleteSuccess(deletedPool){
   $(poolDiv).hide('slow', function(){
     $(poolDiv).remove;
   });
-  // console.log("deleted a pool from db", deletedPool._id);
   removeEventListeners();
 }
 
@@ -149,8 +152,6 @@ function handleNewEventSuccess(pool){
 }
 
 function handleEventDeleteSuccess(eventDeleted){
-  console.log("id of Deleted event: ", eventDeleted._id);
-
     $(`#${eventDeleted._id}`).hide('slow', function(){
       $(`#${eventDeleted._id}`).remove();
     });
@@ -168,13 +169,6 @@ function listenDayClick(){
     console.log('clicked a day of week div');
     $(this).next().toggle(200);
   });
-}
-// remove event listeners such that adding event listeners accross page on ajax complete does not duplicate event listeners
-function removeEventListeners(){
-  $('.pool-delete-btn').off();
-  $('.add-event form').off();
-  $('.delete-event').off();
-  $('.day-of-week').off();
 }
 
 function toggleAdmin(){
@@ -194,4 +188,12 @@ function hideAdmin(){
 function showCurrentDay(){
   $('.event-holder').hide();
   $('.monday .event-holder').show();
+}
+
+// remove event listeners such that adding event listeners accross page on ajax complete does not duplicate event listeners
+function removeEventListeners(){
+  $('.pool-delete-btn').off();
+  $('.add-event form').off();
+  $('.delete-event').off();
+  $('.day-of-week').off();
 }
