@@ -96,33 +96,36 @@ function renderPool(pool){
           <div id="dummy-map">
           </div>
         </section>
-        <section class="events">
-          <!-- ADD EVENT SECTION-->
-          <div class="add-event">
-            <h4>Add an Event</h4>
-            <form action="index.html" method="post">
-              <div class="row">
-                <div class="col-sm-6"><input class="form-control" type="text" name="dayOfWeek" value="" placeholder="Day of Week" required></div>
-                <div class="col-sm-6"><input class="form-control" type="text" name="title"  value="" placeholder="Title" required></div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6"><input class="form-control" type="text" name="startTime" value="" placeholder="Start Time"></div>
-                <div class="col-sm-6"><input class="form-control" type="text" name="endTime" value="" placeholder="End Time"></div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6"><input class="form-control" type="text" name="description" value="" placeholder="Description"></div>
-                <div class="col-sm-6"><input class="form-control submit" class="btn btn-default" type="submit" name="submit" value="Submit"></div>
-              </div>
-            </form>
-          </div>
-        </section>
+
       </div>
       <!-- Pool Info Column 2 End -->
-      <!--Pool Info Map Section Begin-->
-      <div class="col-sm-6 col-md-4">
 
-      </div><!-- Pool Info Map Section End-->
+      <!-- Pool Info Column 3 Begin-->
+      <div class="col-sm-6 col-md-4">
+      <section class="events">
+        <!-- ADD EVENT SECTION-->
+        <div class="add-event">
+          <h4>Add an Event</h4>
+          <form action="index.html" method="post">
+            <div class="row">
+              <div class="col-sm-6"><input class="form-control" type="text" name="dayOfWeek" value="" placeholder="Day of Week" required></div>
+              <div class="col-sm-6"><input class="form-control" type="text" name="title"  value="" placeholder="Title" required></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6"><input class="form-control" type="text" name="startTime" value="" placeholder="Start Time"></div>
+              <div class="col-sm-6"><input class="form-control" type="text" name="endTime" value="" placeholder="End Time"></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6"><input class="form-control" type="text" name="description" value="" placeholder="Description"></div>
+              <div class="col-sm-6"><input class="form-control submit" class="btn btn-default" type="submit" name="submit" value="Submit"></div>
+            </div>
+          </form>
+        </div>
+      </section>
+      </div>
     </div>
+    <!-- Pool Info Column 3 End-->
+
 
     <div class="col-xs-12 pool-tags" data-pool-id="${pool._id}">
     </div>

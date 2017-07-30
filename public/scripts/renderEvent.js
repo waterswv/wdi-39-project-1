@@ -1,5 +1,5 @@
 function renderEvent(poolDiv, element){
-  // append event data to events div
+  // Append events to the appropriate day in the schedule
   let eventDay = element.dayOfWeek.toLowerCase();
   console.log("event day is: ", eventDay);
 
