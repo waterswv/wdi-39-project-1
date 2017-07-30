@@ -19,13 +19,7 @@ poolList.push({
     lat: 37.7594696,
     long: -122.4248613
   },
-<<<<<<< HEAD
-  special: 'Swim Practice Tuesdays 5:30PM - 7PM',
   tags: ['Adult Swim', 'Lap Swim', 'Swim Team', 'Swim lessons']
-=======
-  // special: 'Swim Practice Tuesdays 5:30PM - 7PM'
-
->>>>>>> 9922c3d91e539581493e0b28be71d76044e5c371
 });
 
 poolList.push({
