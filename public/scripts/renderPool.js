@@ -87,9 +87,8 @@ function renderPool(pool){
         </section>
       </div><!-- Pool Info Map Section End-->
     </div>
+    
     <div class="col-xs-12 pool-tags">
-        <button type="button" class="btn btn-info btn-sm">
-        <span class="glyphicon glyphicon-tag" aria-hidden="true"></span> Adult Swim</button>
     </div>
   </div><!--Pool Info End -->
 
