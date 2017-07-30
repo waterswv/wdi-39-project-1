@@ -50,8 +50,12 @@ function renderPool(pool){
 
           <div class="wednesday">
             <div class="row day-of-week">
-              <p class="col-xs-6">Wednesday</p>
-              <p class="col-xs-6">${pool.wednesday}</p>
+            <p class="col-xs-6 show-hide">
+              Wednesday
+              <span class='glyphicon glyphicon-plus'></span>
+              <span class='glyphicon glyphicon-minus'></span>
+            </p>
+            <p class="col-xs-6">${pool.wednesday}</p>
             </div>
             <div class="event-holder">
             </div>
@@ -59,7 +63,11 @@ function renderPool(pool){
 
           <div class="thursday">
             <div class="row day-of-week">
-              <p class="col-xs-6">Thursday</p>
+              <p class="col-xs-6 show-hide">
+                Thursday
+                <span class='glyphicon glyphicon-plus'></span>
+                <span class='glyphicon glyphicon-minus'></span>
+              </p>
               <p class="col-xs-6">${pool.thursday}</p>
             </div>
             <div class="event-holder">
@@ -68,7 +76,11 @@ function renderPool(pool){
 
           <div class="friday">
             <div class="row day-of-week">
-              <p class="col-xs-6">Friday</p>
+              <p class="col-xs-6 show-hide">
+                Friday
+                <span class='glyphicon glyphicon-plus'></span>
+                <span class='glyphicon glyphicon-minus'></span>
+              </p>
               <p class="col-xs-6">${pool.friday}</p>
             </div>
             <div class="event-holder">
@@ -77,7 +89,11 @@ function renderPool(pool){
 
           <div class="saturday">
             <div class="row day-of-week">
-              <p class="col-xs-6">Saturday</p>
+              <p class="col-xs-6 show-hide">
+                Saturday
+                <span class='glyphicon glyphicon-plus'></span>
+                <span class='glyphicon glyphicon-minus'></span>
+              </p>
               <p class="col-xs-6">${pool.saturday}</p>
             </div>
             <div class="event-holder">
@@ -86,7 +102,11 @@ function renderPool(pool){
 
           <div class="sunday">
             <div class="row day-of-week">
-              <p class="col-xs-6">Sunday</p>
+              <p class="col-xs-6 show-hide">
+                Sunday
+                <span class='glyphicon glyphicon-plus'></span>
+                <span class='glyphicon glyphicon-minus'></span>
+              </p>
               <p class="col-xs-6">${pool.sunday}</p>
             </div>
             <div class="event-holder">

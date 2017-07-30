@@ -198,6 +198,8 @@ function hideAdmin(){
 function showCurrentDay(){
   $('.event-holder').hide();
   $('.monday .event-holder').show();
+  $('.monday').find('.glyphicon').toggle();
+
 }
 
 // remove event listeners such that adding event listeners accross page on ajax complete does not duplicate event listeners
