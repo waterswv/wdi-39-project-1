@@ -31,7 +31,7 @@ $(document).ready(function(){
     $('.pool-header button').toggle();
     $('.delete-event').toggle();
     $('#add-pool').toggle();
-    $('.add-event').toggle();
+    $('.add-event').parent().parent().toggle();
   });
 });
 

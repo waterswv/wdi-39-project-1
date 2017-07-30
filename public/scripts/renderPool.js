@@ -90,11 +90,6 @@ function renderPool(pool){
 
       <div class="col-sm-6 col-md-4"> <!--Pool Info Column 2 Begin-->
         <section class="events">
-          <!--
-          <div data-pool-events-id='${pool._id}' class="clearfix">
-          </div>
-          -->
-
           <!-- ADD EVENT SECTION-->
           <div class="add-event">
             <h4>Add an Event</h4>
@@ -125,6 +120,7 @@ function renderPool(pool){
       </div><!-- Pool Info Map Section End-->
     </div>
   </div><!--Pool Info End -->
+
 
   `;
 

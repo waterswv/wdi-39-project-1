@@ -11,6 +11,10 @@ font-family: 'Mada', sans-serif;
   background-color: #dbf2ff;
 }
 
+.event {
+  padding-left: 10px;
+}
+
 body {
   background-color: #F5F8FA;
   color: #292B2C;
