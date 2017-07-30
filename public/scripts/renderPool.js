@@ -92,6 +92,10 @@ function renderPool(pool){
         <section class="image">
         <img src='${pool.imageURL}' alt='pool image'/>
         </section>
+        <section class="map">
+          <div id="dummy-map">
+          </div>
+        </section>
         <section class="events">
           <!--
           <div data-pool-events-id='${pool._id}' class="clearfix">
@@ -121,10 +125,7 @@ function renderPool(pool){
       <!-- Pool Info Column 2 End -->
       <!--Pool Info Map Section Begin-->
       <div class="col-sm-6 col-md-4">
-        <section class="map">
-          <div id="dummy-map">
-          </div>
-        </section>
+
       </div><!-- Pool Info Map Section End-->
     </div>
 
