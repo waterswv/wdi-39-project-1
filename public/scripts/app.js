@@ -48,13 +48,19 @@ function handleIndexSuccess(poolsData){
     renderPool(pool);
     let poolDiv = `[data-pool-id=${pool._id}]`;
     pool.events.forEach(function(element){
-      // console.log("EVENT load");
-      // console.log(pool);
+      console.log("(1)EVENT load element is: ", element);
       renderEvent(poolDiv, element);
     });
-    console.log('the lat is ', pool.maps.lat);
 
-    // Insert Google Map
+    // pool.tags.forEach(function(poolTag){
+    //   console.log('(2)the pool tag is: ', poolTag);
+    //   $('.pool-tags').append(`<button type="button" class="btn btn-info btn-sm">
+    //   <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>` + poolTag + " </button>" + `<span> </span>`);
+    // });
+    renderTags(poolDiv, pool);
+
+
+    console.log('(3)the lat is ', pool.maps.lat);
     let theLocation = {
       lat: pool.maps.lat,
       lng: pool.maps.long
