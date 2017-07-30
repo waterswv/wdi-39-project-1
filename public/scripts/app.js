@@ -39,18 +39,22 @@ $(document).ready(function(){
 $(document).ajaxComplete(listenDeletePool);
 $(document).ajaxComplete(listenAddEvent);
 $(document).ajaxComplete(listenDeleteEvent);
+$(document).ajaxComplete(listenDayClick);
+
 
 function handleIndexSuccess(poolsData){
   // Render Pool data to page
   poolsData.forEach(function(pool){
     renderPool(pool);
-    let eventsDiv = `[data-pool-events-id=${pool._id}]`;
+    let poolDiv = `[data-pool-id=${pool._id}]`;
     pool.events.forEach(function(element){
-      console.log("EVENT load");
-      console.log(pool);
-      renderEvent(eventsDiv, element);
+      // console.log("EVENT load");
+      // console.log(pool);
+      renderEvent(poolDiv, element);
     });
     console.log('the lat is ', pool.maps.lat);
+
+    // Insert Google Map
     let theLocation = {
       lat: pool.maps.lat,
       lng: pool.maps.long
@@ -100,7 +104,7 @@ function listenAddEvent(){
 function listenDeleteEvent(){
   $('.delete-event').on('click', function(e){
     e.preventDefault();
-    let eventId = $(this).attr('id');
+    let eventId = $(this).parent().parent().attr('id');
     let poolId = $(this).closest('.pool').data('pool-id');
     console.log("id of btn: ", eventId, "poolId", poolId);
     $.ajax({
@@ -110,22 +114,19 @@ function listenDeleteEvent(){
       error: handleError
     });
   })
-
 }
 
 function handleNewPoolSuccess(newPool){
   console.log("new pool success", newPool);
   renderPool(newPool);
   // get the div for the pool where we'll put events
-  let eventsDiv = `[data-pool-events-id=${newPool._id}]`;
+  let poolDiv = `[data-pool-id=${newPool._id}]`;
   newPool.events.forEach(function(element){
     console.log("new pool success event");
-    renderEvent(eventsDiv, element);
+    renderEvent(poolDiv, element);
   });
   // remove event listeners such that adding event listeners accross page on ajax complete does not duplicate event listeners
-  $('.pool-delete-btn').off();
-  $('.add-event form').off();
-  $('.delete-event').off();
+  removeEventListeners();
 }
 
 function handlePoolDeleteSuccess(deletedPool){
@@ -139,19 +140,18 @@ function handlePoolDeleteSuccess(deletedPool){
 
 function handleNewEventSuccess(pool){
   // create the target for where we're going to place the new event
-  let eventsDiv = `[data-pool-events-id=${pool._id}]`;
+  let poolDiv = `[data-pool-id=${pool._id}]`;
   // set event to add to be the last event listed in the pool response
   let eventToAdd = pool.events[pool.events.length-1];
-  renderEvent(eventsDiv, eventToAdd);
+  renderEvent(poolDiv, eventToAdd);
   removeEventListeners();
 }
 
 function handleEventDeleteSuccess(eventDeleted){
   console.log("id of Deleted event: ", eventDeleted._id);
-  let eventDiv =$(`#${eventDeleted._id}`).parent();
 
-    $(`#${eventDeleted._id}`).parent().hide('slow', function(){
-      $(`#${eventDeleted._id}`).parent().remove();
+    $(`#${eventDeleted._id}`).hide('slow', function(){
+      $(`#${eventDeleted._id}`).remove();
     });
   removeEventListeners();
 }
@@ -160,9 +160,19 @@ function handleError(err){
   console.log(err);
 }
 
+function listenDayClick(){
+  // toggle events for a day of the week clicked
+  $('.day-of-week').on('click', function(e){
+    e.preventDefault();
+    console.log('clicked a day of week div');
+    $(this).next().toggle(200);
+  });
+}
+
 // remove event listeners such that adding event listeners accross page on ajax complete does not duplicate event listeners
 function removeEventListeners(){
   $('.pool-delete-btn').off();
   $('.add-event form').off();
   $('.delete-event').off();
+  $('.day-of-week').off();
 }
