@@ -32,7 +32,7 @@ input {
 }
 
 .btn {
-  background-color: #e2e2e2;
+  /*background-color: #e2e2e2;*/
 }
 
 .submit {
@@ -92,6 +92,7 @@ h4 {
 .pool, #add-pool {
   background-color: #FFFFFF;
   border: 1px solid #DFDFDF;
+  padding-bottom: 10px;
 }
 
 .pool-header button {
@@ -181,7 +182,14 @@ http://glyphicons.com/
   float: right;
   margin-top: 20px;
 }
-
+.image {
+  margin-top: 10px;
+}
+img {
+  height: 250px;
+  width: 100%;
+  border-radius: 15px;
+}
 #dummy-map{
   height: 250px;
   width: 100%
@@ -206,4 +214,10 @@ footer nav {
 footer nav a {
   display: inline-block;
   padding: 10px;
+}
+
+.pool-tags {
+  border: 1px solid #e2e2e2;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

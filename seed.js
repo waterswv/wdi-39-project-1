@@ -19,8 +19,8 @@ poolList.push({
     lat: 37.7594696,
     long: -122.4248613
   },
-  // special: 'Swim Practice Tuesdays 5:30PM - 7PM'
-
+  tags: ['Adult Swim', 'Lap Swim', 'Swim Team', 'Swim lessons'],
+  imageURL: 'images/ucsf_pool.jpg'
 });
 
 poolList.push({
@@ -40,7 +40,9 @@ poolList.push({
     lat: 37.7594696,
     long: -122.4248613
   },
-  special: 'Swim Practice Tuesdays 5:30PM - 7PM'
+  special: 'Swim Practice Tuesdays 5:30PM - 7PM',
+  tags: ['Adult Swim'],
+  imageURL: 'images/pomeroy_pool.jpg'
 });
 
 poolList.push({
@@ -60,7 +62,9 @@ poolList.push({
     lat: 37.7594696,
     long: -122.4248613
   },
-  special: 'Swim Practice Tuesdays 5:30PM - 7PM'
+  special: 'Swim Practice Tuesdays 5:30PM - 7PM',
+  tags: ['Adult Swim', 'Lap Swim'],
+  imageURL: 'images/garfield_pool.jpg'
 });
 
 poolList.push({
@@ -80,7 +84,9 @@ poolList.push({
     lat: 37.7594696,
     long: -122.4248613
   },
-  special: 'Swim Practice Tuesdays 5:30PM - 7PM'
+  special: 'Swim Practice Tuesdays 5:30PM - 7PM',
+  tags: ['Adult Swim', 'Swim Team'],
+  imageURL: 'images/mission_pool.jpg'
 });
 
 

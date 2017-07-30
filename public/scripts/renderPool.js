@@ -11,7 +11,7 @@ function renderPool(pool){
       <!--Pool Info Column 1 Begin-->
       <div class="col-sm-6 col-md-4">
         <div class="pool-header clearfix">
-          <button class="pool-delete-btn btn btn-default">Delete Pool</button>
+          <button class="pool-delete-btn btn btn-danger">Delete Pool</button>
           <h2>${pool.name}</h2>
         </div>
         <section class="contact">
@@ -89,6 +89,9 @@ function renderPool(pool){
       </div> <!--Pool Info Column 1 End-->
 
       <div class="col-sm-6 col-md-4"> <!--Pool Info Column 2 Begin-->
+        <section class="image">
+        <img src='${pool.imageURL}' alt='pool image'/>
+        </section>
         <section class="events">
           <!-- ADD EVENT SECTION-->
           <div class="add-event">
@@ -118,6 +121,9 @@ function renderPool(pool){
           </div>
         </section>
       </div><!-- Pool Info Map Section End-->
+    </div>
+
+    <div class="col-xs-12 pool-tags" data-pool-id="${pool._id}">
     </div>
   </div><!--Pool Info End -->
 
