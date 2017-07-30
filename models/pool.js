@@ -23,7 +23,8 @@ let PoolSchema = new Schema({
     long: Number
   },
   events: [Events.schema],
-  tags: [String]
+  tags: [String],
+  imageURL: String
 })
 
 let Pool = mongoose.model('Pool', PoolSchema);
