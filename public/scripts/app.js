@@ -183,14 +183,15 @@ function toggleAdmin(){
   $('.pool-header button').toggle();
   $('.delete-event').toggle();
   $('#add-pool').toggle();
-  $('.add-event').parent().parent().toggle();
+  $('.add-event').toggle();
 }
 
 function hideAdmin(){
   $('.pool-header button').hide();
   $('.delete-event').hide();
   $('#add-pool').hide();
-  $('.add-event').parent().parent().hide();
+  $('.add-event').hide();
+
 }
 
 function showCurrentDay(){
