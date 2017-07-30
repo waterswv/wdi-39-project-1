@@ -19,7 +19,8 @@ poolList.push({
     lat: 37.7594696,
     long: -122.4248613
   },
-  special: 'Swim Practice Tuesdays 5:30PM - 7PM'
+  // special: 'Swim Practice Tuesdays 5:30PM - 7PM'
+
 });
 
 poolList.push({
@@ -82,34 +83,188 @@ poolList.push({
   special: 'Swim Practice Tuesdays 5:30PM - 7PM'
 });
 
-var eventList = [];
 
-eventList.push({
-  dayOfWeek: 'Monday',
-  title: 'Swim Team Practice',
-  description: 'U-17 Boys & Girls Practice',
-  startTime: '4PM',
-  endTime: '5PM',
-  isRecurring: true
-});
-
-eventList.push({
-  dayOfWeek: 'Tuesday',
-  title: 'Swim Meets',
-  description: 'City Meet Invitational, all qualifiers',
-  startTime: '3PM',
-  endTime: '7PM',
-  isRecurring: true
-});
-
-eventList.push({
-  dayOfWeek: 'Friday',
-  title: 'Adult Lessons',
-  description: '3 Swim lanes set aside for Adult lessons',
-  startTime: '6PM',
-  endTime: '8PM',
-  isRecurring: true
-});
+var eventList = [
+  {
+    dayOfWeek: 'Monday',
+    title: 'Swim Team Practice',
+    description: '',
+    startTime: '7AM',
+    endTime: '8AM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Monday',
+    title: 'Lap Swim Only',
+    description: '',
+    startTime: '9AM',
+    endTime: '11AM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Monday',
+    title: 'Masters Club',
+    description: '',
+    startTime: '5PM',
+    endTime: '6PM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Tuesday',
+    title: 'Swim Team Practice',
+    description: '',
+    startTime: '8AM',
+    endTime: '9AM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Tuesday',
+    title: 'Lap Swim Only',
+    description: '',
+    startTime: '9AM',
+    endTime: '12PM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Tuesday',
+    title: 'Family Swim',
+    description: '',
+    startTime: '3PM',
+    endTime: '5PM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Wednesday',
+    title: 'Swim Team Practice',
+    description: '',
+    startTime: '7AM',
+    endTime: '8AM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Wednesday',
+    title: 'Lap Swim Only',
+    description: '',
+    startTime: '9AM',
+    endTime: '11AM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Wednesday',
+    title: 'Masters Club Practice',
+    description: '',
+    startTime: '5PM',
+    endTime: '6PM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Thursday',
+    title: 'Swim Team Practice',
+    description: '',
+    startTime: '8AM',
+    endTime: '9AM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Thursday',
+    title: 'Lap Swim Only',
+    description: '',
+    startTime: '9AM',
+    endTime: '12PM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Thursday',
+    title: 'Family Swim',
+    description: '',
+    startTime: '3PM',
+    endTime: '5PM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Friday',
+    title: 'Swim Team Practice',
+    description: '',
+    startTime: '7AM',
+    endTime: '8AM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Friday',
+    title: 'Lap Swim Only',
+    description: '',
+    startTime: '9AM',
+    endTime: '11AM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Friday',
+    title: 'Masters Club Practice',
+    description: '',
+    startTime: '5PM',
+    endTime: '6PM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Saturday',
+    title: 'Family Swim',
+    description: '',
+    startTime: '9AM',
+    endTime: '5PM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Saturday',
+    title: 'Lap Swim (3 lanes)',
+    description: '',
+    startTime: '9AM',
+    endTime: '5PM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Sunday',
+    title: 'Family Swim',
+    description: '',
+    startTime: '9AM',
+    endTime: '5PM',
+    isRecurring: true
+  },
+  {
+    dayOfWeek: 'Sunday',
+    title: 'Lap Swim (3 lanes)',
+    description: '',
+    startTime: '9AM',
+    endTime: '5PM',
+    isRecurring: true
+  }
+];
+//
+// eventList.push({
+//   dayOfWeek: 'Monday',
+//   title: 'Swim Team Practice',
+//   description: 'U-17 Boys & Girls Practice',
+//   startTime: '4PM',
+//   endTime: '5PM',
+//   isRecurring: true
+// });
+//
+// eventList.push({
+//   dayOfWeek: 'Tuesday',
+//   title: 'Swim Meets',
+//   description: 'City Meet Invitational, all qualifiers',
+//   startTime: '3PM',
+//   endTime: '7PM',
+//   isRecurring: true
+// });
+//
+// eventList.push({
+//   dayOfWeek: 'Friday',
+//   title: 'Adult Lessons',
+//   description: '3 Swim lanes set aside for Adult lessons',
+//   startTime: '6PM',
+//   endTime: '8PM',
+//   isRecurring: true
+// });
 
 poolList.forEach(function(pool){
   pool.events = eventList;
