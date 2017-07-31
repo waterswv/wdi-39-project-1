@@ -14,9 +14,9 @@
 
 #### Technology Leveraged
 * javascript
-* [Node.js] (https://nodejs.org/en/)
-* [MongoDB] (http://mongodb.github.io/node-mongodb-native/2.0/)
-* [Google Maps API for Node] (https://github.com/moshen/node-googlemaps/blob/master/README.md)
+* [Node.js](https://nodejs.org/en/)
+* [MongoDB](http://mongodb.github.io/node-mongodb-native/2.0/)
+* [Google Maps API for Node](https://github.com/moshen/node-googlemaps/blob/master/README.md)
 
 #### Technology Overview
 
