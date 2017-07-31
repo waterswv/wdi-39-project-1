@@ -20,7 +20,7 @@
 
 #### Technology Overview
 
-Our App is built with a RESTful architecture utilizing Node.js and MongoDB to store data. We implemented a model-controller framework with mongoose and several node-modules, including [express](https://expressjs.com/) & [body-parser](https://github.com/expressjs/body-parser). 
+Our App is built with a RESTful architecture utilizing Node.js and MongoDB to store data. We implemented a model-controller framework with mongoose and several node-modules, including [express](https://expressjs.com/) & [body-parser](https://github.com/expressjs/body-parser). Our google maps api integration utilizes a node-module that allows us to use geoencoding to translate an address into Lat/Long coordinates on the server and then pass a map object to the client-browser via ajax. For more info on the GoogleMapsAPI node-module vist the repo [here](https://github.com/moshen/node-googlemaps/blob/master/README.md)).
 
 ### Contributors list
 
