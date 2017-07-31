@@ -2,7 +2,7 @@ console.log(`sanity check app.js connected`);
 
 $(document).ready(function(){
 
-  // GET INDEX OF ALL POOLS
+  // Get index of all pools in the database
   $.ajax({
     method: 'GET',
     url: 'api/pools/',
@@ -10,12 +10,10 @@ $(document).ready(function(){
     error: handleError
   });
 
-  // ADD POOL EVENT LISTENER AND AJAX CALL
+  // Add pool event listener and ajax call
   $('#add-pool form').on('submit', function(e){
     e.preventDefault();
-    console.log("add-pool form submitted");
     let data = $(this).serialize();
-    console.log(data);
     $.ajax({
       method: 'POST',
       url: '/api/pools/',
@@ -36,16 +34,15 @@ $(document).ready(function(){
 // Any time there's an ajax call, re-attach all the event listeners
 //  Event listeners are removed at the end of each handleSuccess function
 //  They are re-attached here when ajax calls are complete
-//  This process is to ensure that the listeners are applied to elements added to the page only once
+//  This process is to ensure that the listeners are always applied to elements added to the page (add pool, add event), but not applied multiple times resulting in functions being run more times than intended
 
 $(document).ajaxComplete(listenDeletePool);
 $(document).ajaxComplete(listenAddEvent);
 $(document).ajaxComplete(listenDeleteEvent);
 $(document).ajaxComplete(listenDayClick);
 
-
 function handleIndexSuccess(poolsData){
-  // Render Pool data to page
+  // Render pool data to page
   poolsData.forEach(function(pool){
     renderPool(pool);
     let poolDiv = `[data-pool-id=${pool._id}]`;
@@ -94,7 +91,6 @@ function listenDeletePool(){
 function listenAddEvent(){
   $('.add-event form').on('submit', function(e){
     e.preventDefault();
-    console.log("add-event form submitted");
     let data = $(this).serialize();
     let id = $(this).closest('.pool').data('pool-id');
     $.ajax({
@@ -114,7 +110,6 @@ function listenDeleteEvent(){
     e.preventDefault();
     let eventId = $(this).parent().parent().attr('id');
     let poolId = $(this).closest('.pool').data('pool-id');
-    console.log("id of btn: ", eventId, "poolId", poolId);
     $.ajax({
       method: 'DELETE',
       url: `/api/pools/${poolId}/events/${eventId}`,
@@ -125,12 +120,10 @@ function listenDeleteEvent(){
 }
 
 function handleNewPoolSuccess(newPool){
-  console.log("new pool success", newPool);
   renderPool(newPool);
   // get the div for the pool where we'll put events
   let poolDiv = `[data-pool-id=${newPool._id}]`;
   newPool.events.forEach(function(element){
-    console.log("new pool success event");
     renderEvent(poolDiv, element);
   });
   // remove event listeners such that adding event listeners accross page on ajax complete does not duplicate event listeners
@@ -197,7 +190,7 @@ function showCurrentDay(){
   $('.monday').find('.glyphicon-minus').toggle();
 }
 
-// remove event listeners such that adding event listeners accross page on ajax complete does not duplicate event listeners
+// remove event listeners such that adding event listeners accross whole page on ajax complete does not duplicate event listeners
 function removeEventListeners(){
   $('.pool-delete-btn').off();
   $('.add-event form').off();

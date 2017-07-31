@@ -5,16 +5,6 @@ font-family: 'Merriweather Sans', sans-serif;
 font-family: 'Mada', sans-serif;
 */
 
-.show-hide > .glyphicon {
-  color: #3097D1;
-  font-size: .7em;
-}
-
-.show-hide > .glyphicon-minus {
-  display: none;
-}
-
-
 .event-holder {
   /*color: red;*/
   font-size: .9em;
@@ -127,6 +117,15 @@ http://glyphicons.com/
   font-weight: 200;
 }
 
+/*Glyphicons for toggling events for each day of the week*/
+.show-hide > .glyphicon {
+  color: #3097D1;
+  font-size: .7em;
+}
+.show-hide > .glyphicon-minus {
+  display: none;
+}
+
 .pool h2 {
   float: left;
 }
@@ -154,14 +153,6 @@ http://glyphicons.com/
   margin-bottom: 20px;
 }
 
-#add-pool {
-  /*display: none;*/
-}
-
-.map {
-  padding: 10px;
-}
-
 .pool-header {
   border-bottom: 1px solid #DFDFDF;
   border-radius: 0;
@@ -171,10 +162,6 @@ http://glyphicons.com/
   border-top: 1px solid #DFDFDF;
   border-radius: 0;
   font-size: 1.1em;
-}
-
-.add-event {
-  /*display: none;*/
 }
 
 .add-event h4 {
@@ -190,14 +177,15 @@ http://glyphicons.com/
   float: right;
   margin-top: 20px;
 }
+
 .image {
   margin-top: 10px;
 }
+
 img {
   height: 250px;
   width: 100%;
   border-radius: 5px;
-
 }
 
 #dummy-map{
@@ -207,6 +195,10 @@ img {
 
 #dummy-map div {
   margin-top: 10px;
+}
+
+.map {
+  padding: 10px;
 }
 
 /*Overlay to prevent annoying zoom of map when you scroll over it*/
