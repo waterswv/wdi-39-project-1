@@ -24,5 +24,5 @@ Our App is built with a RESTful architecture utilizing Node.js and MongoDB to st
 
 ### Contributors list
 
-[![waterswv](https://avatars0.githubusercontent.com/u/8486789?v=4&s=460)](https://github.com/waterswv)
-[![sonoilconte](https://avatars1.githubusercontent.com/u/29389347?v=4&s=460)(https://github.com/sonoilconte)]
+[![waterswv](https://avatars0.githubusercontent.com/u/8486789?v=4&s=40)](https://github.com/waterswv)
+[![sonoilconte](https://avatars3.githubusercontent.com/u/29389347?v=4&s=40)](https://github.com/sonoilconte)
