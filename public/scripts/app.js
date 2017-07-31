@@ -55,11 +55,6 @@ function handleIndexSuccess(poolsData){
       renderEvent(poolDiv, element);
     });
 
-    // pool.tags.forEach(function(poolTag){
-    //   console.log('(2)the pool tag is: ', poolTag);
-    //   $('.pool-tags').append(`<button type="button" class="btn btn-info btn-sm">
-    //   <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>` + poolTag + " </button>" + `<span> </span>`);
-    // });
     renderTags(poolDiv, pool);
 
     console.log('(3)the lat is ', pool.maps.lat);

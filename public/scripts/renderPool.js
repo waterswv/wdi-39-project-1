@@ -121,6 +121,7 @@ function renderPool(pool){
         <img src='${pool.imageURL}' alt='pool image'/>
         </section>
         <section class="map">
+          <div class="overlay" onClick="style.pointerEvents='none'"></div>
           <div id="dummy-map">
           </div>
         </section>
