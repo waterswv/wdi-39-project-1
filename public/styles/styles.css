@@ -115,7 +115,15 @@ http://glyphicons.com/
   background-color: inherit;
   color: #b2b2b2;
   font-weight: 200;
-  /*display: none;*/
+}
+
+/*Glyphicons for toggling events for each day of the week*/
+.show-hide > .glyphicon {
+  color: #3097D1;
+  font-size: .7em;
+}
+.show-hide > .glyphicon-minus {
+  display: none;
 }
 
 .pool h2 {
@@ -145,14 +153,6 @@ http://glyphicons.com/
   margin-bottom: 20px;
 }
 
-#add-pool {
-  /*display: none;*/
-}
-
-.map {
-  padding: 10px;
-}
-
 .pool-header {
   border-bottom: 1px solid #DFDFDF;
   border-radius: 0;
@@ -164,10 +164,6 @@ http://glyphicons.com/
   font-size: 1.1em;
 }
 
-.add-event {
-  /*display: none;*/
-}
-
 .add-event h4 {
   border-top: 1px solid #DFDFDF;
   border-radius: 0;
@@ -177,28 +173,44 @@ http://glyphicons.com/
   padding: 5px 0;
 }
 
-
 .search {
   float: right;
   margin-top: 20px;
 }
+
 .image {
   margin-top: 10px;
 }
+
 img {
   height: 250px;
   width: 100%;
   border-radius: 5px;
-
 }
+
 #dummy-map{
   height: 250px;
   width: 100%;
-
 }
 
 #dummy-map div {
   margin-top: 10px;
+}
+
+.map {
+  padding: 10px;
+}
+
+/*Overlay to prevent annoying zoom of map when you scroll over it*/
+/*https://stackoverflow.com/questions/21992498/disable-mouse-scroll-wheel-zoom-on-embedded-google-maps*/
+.overlay {
+   background:transparent;
+   position:relative;
+   width: 100%;
+   height:250px; /* your iframe height */
+   top: 250px;  /* your iframe height */
+   margin-top:-250px;  /* your iframe height */
+   z-index: 10;
 }
 
 footer {
