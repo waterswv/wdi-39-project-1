@@ -11,3 +11,18 @@
 
 
 ---
+
+#### Technology Leveraged
+* javascript
+* [Node.js] (https://nodejs.org/en/)
+* [MongoDB] (http://mongodb.github.io/node-mongodb-native/2.0/)
+* [Google Maps API for Node] (https://github.com/moshen/node-googlemaps/blob/master/README.md)
+
+#### Technology Overview
+
+Our App is built with a RESTful architecture utilizing Node.js and MongoDB to store data. We implemented a model-controller framework with mongoose and several node-modules, including [express](https://expressjs.com/) & [body-parser](https://github.com/expressjs/body-parser). 
+
+### Contributors list
+
+[![waterswv](https://avatars0.githubusercontent.com/u/8486789?v=4&s=460)](https://github.com/waterswv)
+[![sonoilconte](https://avatars1.githubusercontent.com/u/29389347?v=4&s=460)(https://github.com/sonoilconte)]
