@@ -11,13 +11,37 @@ It's also often the case that the pool you regularly swim at might not be conven
 
 
 ---
+#### Features
+* Display all pools in dataset
+* Add a new pool end-point
+* Add a new event to each pool
+* Delete a pool
+* Delete an individual event at pool
+* Geoencoder translation from address to LatLng data for new map
+* Event rendering based on day of week
+* Keyword Tags listed by pool
+* Images stored by Pool
+* Admin functionality for delete & add features
+
+#### Future enhancements
+* Add global search by name and tags
+* Add location based search
+* Default display events based on current day of week
+* Create an image gallery by Pool
+* Create user/password login state
+* Enable image upload and validation by users
+* Fix render map on pool post
+* Create update/put end-point for pool
+* API controller docs update
+* stop hunger, fight crime
+
 
 #### Technology Leveraged
 * HTML
 * CSS
 * javascript
-* Jquery (http://jquery.com/)
-* Bootstrap (http://getbootstrap.com/)
+* [Jquery](http://jquery.com/)
+* [Bootstrap](http://getbootstrap.com/)
 * [Node.js](https://nodejs.org/en/)
 * [MongoDB](http://mongodb.github.io/node-mongodb-native/2.0/)
 * [Google Maps API for Node](https://github.com/moshen/node-googlemaps/blob/master/README.md)
