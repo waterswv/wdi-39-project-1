@@ -1,5 +1,5 @@
 # wdi-39-project-1
-# Find a Pool (working title)
+# Find a Pool 
 
 # Concept
 
@@ -8,6 +8,8 @@ If you're an avid swimmer, finding a pool that is open and accessible when you'r
 Our app aims to solve this problem by providing a one-stop resource for info on all the pool in your region, whether public or private. The site visitor can see general open hours as well as granular detail of the schedule. The site admin can add and delete pools, and add and delete scheduled events at those pools.
 
 It's also often the case that the pool you regularly swim at might not be conveniently located for where you you happen to be. You might not be aware of what pools are in your neighborhood, especially if you're visiting from out of town. Our app provides a map for each pool. In future versions, we plan to add a location based functionality that will list pools according to proximity.
+
+[Visit Find a Pool](https://salty-eyrie-69350.herokuapp.com/)
 
 
 ---
